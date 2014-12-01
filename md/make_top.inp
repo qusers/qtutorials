@@ -1,0 +1,12 @@
+rl ../FF_Q/Qoplsaa.lib
+rl ../FF_Q/heme.lib
+rl ../FF_Q/cma.lib
+rff ../FF_Q/Qoplsaa.prm
+rp complex.pdb
+addbond 5480 6383 y
+boundary sphere 407:C1 18
+solvate 407:C1 18 1 HOH
+mt cma
+wt cma.top
+wp cma_top.pdb y
+quit

@@ -1,0 +1,9 @@
+rt lig_p.top
+av
+dc1.dcd y y
+dc2.dcd y y
+dc3.dcd y y
+dc4.dcd y y
+dc5.dcd y n
+ave1.pdb n
+quit

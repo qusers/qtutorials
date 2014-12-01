@@ -1,0 +1,27 @@
+[MD]
+steps                 50000
+stepsize                  1
+temperature             310.0
+bath_coupling           100
+lrf                      on
+
+[sphere]
+shell_radius 14
+shell_force 20 
+
+[cut_offs]
+
+[intervals]
+non_bond                 25
+output                   50
+energy                    0
+
+[files]
+topology       lig_p.top
+fep            lig_p.fep
+final          eq6.re
+restart        eq5.re
+
+[sequence_restraints]
+1 3153 0 0
+

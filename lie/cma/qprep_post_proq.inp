@@ -1,0 +1,22 @@
+rl ../qoplsaa.lib
+rl ../heme.lib
+rl ../cma.lib
+rprm ../qoplsaa.prm
+
+rp cma_prepped_proqed.pdb
+
+addbond 348:SG 406:FE y
+
+boundary 1 407:C1 20
+
+solvate 407:C1 20 1 HOH
+
+maketop lig
+
+writetop cma.top
+
+writepdb cma_prepped_final.pdb y
+
+q
+
+

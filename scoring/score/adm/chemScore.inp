@@ -1,0 +1,11 @@
+adm.top
+9
+solute
+.
+yes
+lig.fep
+/ibg/courses/1MB280/workshop2005/Q5/chemscore_oplsaa.prm
+go
+dc1.dcd
+mean
+.

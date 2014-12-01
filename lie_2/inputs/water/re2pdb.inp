@@ -1,0 +1,24 @@
+rl ../../Forcefield/Qoplsaa.lib
+rl ../../Forcefield/HIVRT.lib
+rt lig_w.top
+rx eq1.re
+wp eq1.pdb n
+rx eq2.re
+wp eq2.pdb n
+rx eq3.re
+wp eq3.pdb n
+rx eq4.re
+wp eq4.pdb n
+rx eq5.re
+wp eq5.pdb n
+rx dc1.re
+wp dc1.pdb n
+rx dc2.re
+wp dc2.pdb n
+rx dc3.re
+wp dc3.pdb n
+rx dc4.re
+wp dc4.pdb n
+rx dc5.re
+wp dc5.pdb n
+q

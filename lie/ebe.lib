@@ -1,0 +1,60 @@
+{EBE}               !Residue name ethylbenzene
+    [info]
+        SYBYLtype  RESIDUE     !SYBYL substructure type
+    [atoms]
+	1 C1       CA	    -0.1150
+	2 C2       CA	    -0.1150
+	3 C3       CA	    -0.1150
+	4 C4       CA	    -0.1150
+	5 C5       CA	    -0.1150
+	6 C6       CA	    -0.1150
+	7 C7       CT	    -0.0050
+	8 C8       CT	    -0.1800
+	9 H1       HA	     0.1150
+	10 H2      HA	     0.1150
+	11 H3      HA	     0.1150
+	12 H5      HA	     0.1150
+	13 H6      HA	     0.1150
+	14 H71     HC	     0.0600
+	15 H72     HC	     0.0600
+        16 H81     HC	     0.0600
+	17 H82     HC	     0.0600
+	18 H83     HC	     0.0600
+
+
+    [bonds]	   
+	   1    2
+	   2    3
+	   3    4
+	   4    5
+	   5    6
+	   6    1
+	   4    7
+	   7    8
+	   1    9
+	   2    10
+	   3    11
+	   5    12
+	   6    13
+	   7    14
+	   7    15
+	   8    16
+	   8    17
+	   8    18
+	   
+    [impropers]
+           C1  C2  H2  C3
+           C2  C3  H3  C4
+           C3  C4  C7  C5
+           C4  C5  H5  C6
+           C5  C6  H6  C1
+           C6  C1  H1  C2
+    [charge_groups]
+         1 9
+         2 10
+         3 11
+         7 4 14 15
+         5 12
+         6 13
+         8 16 17 18
+         

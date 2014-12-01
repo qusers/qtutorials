@@ -1,0 +1,45 @@
+[MD]
+steps                  4000
+stepsize                  1
+temperature              50.0
+bath_coupling             5
+random_seed            3323
+initial_temperature      50
+shake_solvent            on
+shake_solute            off
+lrf                      on
+
+[cut_offs]
+solute_solute            10
+solute_solvent           10
+solvent_solvent          10
+q_atom                   99
+lrf                      99
+
+[sphere]
+shell_force              10
+shell_radius           0.83
+
+[trajectory_atoms]
+not excluded
+
+[intervals]
+non_bond                 50
+output                   50
+energy                    0
+trajectory              500
+
+[files]
+topology       lig.top
+final          eq2.re
+restart        eq1.re
+fep            lig.fep
+trajectory     eq2.dcd
+
+[sequence_restraints]
+1 6483 25.0 1
+
+[lambdas]
+!CMA    CAM
+1.000   0.000
+

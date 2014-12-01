@@ -1,0 +1,14 @@
+cam2.top
+xscore
+solute
+.
+yes
+lig.fep
+restype=HEM
+.
+qoplsaa
+/ibg/courses/1MB280/workshop2005/Q5/xscore_default.input
+go
+dc1.dcd
+mean
+.

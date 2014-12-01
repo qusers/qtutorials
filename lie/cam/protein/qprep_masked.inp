@@ -1,0 +1,15 @@
+rl ../../qoplsaa.lib
+rl ../../heme.lib
+rl ../../cam.lib
+rprm ../../qoplsaa.prm
+
+rt lig.top
+
+mask none
+mask not excluded
+
+writepdb cam_masked.pdb y
+
+q
+
+

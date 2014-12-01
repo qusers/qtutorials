@@ -1,0 +1,22 @@
+lig_p.top
+1
+residue 203 204
+end
+go
+eq1.re
+eq2.re
+eq3.re
+eq4.re
+eq5.re
+eq6.re
+dc1.dcd
+dc2.dcd
+dc3.dcd
+dc4.dcd
+dc5.dcd
+dc6.dcd
+dc7.dcd
+dc8.dcd
+dc9.dcd
+dc10.dcd
+end

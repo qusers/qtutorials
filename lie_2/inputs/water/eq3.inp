@@ -1,0 +1,31 @@
+[MD]
+steps                  2500
+stepsize                  1
+temperature             150.0
+bath_coupling            50
+random_seed               3
+initial_temperature     150.0
+shake_solvent            on
+shake_solute            off
+lrf                      on
+
+[sphere]
+shell_radius 14
+shell_force 20 
+
+[cut_offs]
+
+[intervals]
+non_bond                 25
+output                   50
+energy                    0
+trajectory                0
+
+[files]
+topology       lig_w.top
+final          eq3.re
+restart        eq2.re
+
+[sequence_restraints]
+1 end 5 0 1
+

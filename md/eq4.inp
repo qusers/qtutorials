@@ -1,0 +1,26 @@
+[MD]
+steps                     500
+stepsize                  1
+temperature               300.0
+bath_coupling             10
+random_seed               1231
+initial_temperature       150.0
+shake_solute              off
+lrf                       on
+
+[sphere]
+shell_force              10
+shell_radius             0.80
+
+[intervals]
+output                    50
+
+[files]
+topology     cma.top
+restart      eq3.re
+final        eq4.re
+fep          lie.fep
+
+[sequence_restraints]
+1 6486 10.0 0 
+

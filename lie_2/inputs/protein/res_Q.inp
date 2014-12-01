@@ -1,0 +1,18 @@
+lig_p.top
+8
+1 
+202
+residue 203 204
+end
+go
+dc1.dcd
+dc2.dcd
+dc3.dcd
+dc4.dcd
+dc5.dcd
+dc6.dcd
+dc7.dcd
+dc8.dcd
+dc9.dcd
+dc10.dcd
+end

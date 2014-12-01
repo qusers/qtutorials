@@ -1,0 +1,10 @@
+rl ../../Forcefield/Qoplsaa.lib
+rl ../../Forcefield/HIVRT.lib
+rprm ../../Forcefield/Qoplsaa.prm
+rp lig_p.pdb
+boundary 1 144.589 -24.482  73.083 18.0
+solvate 144.589 -24.482  73.083 19.0 1 HOH
+maketop MKC_p
+writetop lig_p.top
+writepdb top_p.pdb y
+q

@@ -1,0 +1,16 @@
+rl ../../Forcefield/Qoplsaa.lib
+rl ../../Forcefield/HIVRT.lib
+rprm ../../Forcefield/Qoplsaa.prm
+rp lig_w.pdb
+boundary 1 mass
+all
+end
+18.0
+solvate mass
+all 
+end
+19.0 1 HOH
+maketop MKC_w
+writetop lig_w.top
+writepdb top_w.pdb y
+q

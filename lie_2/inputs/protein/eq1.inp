@@ -1,0 +1,29 @@
+[MD]
+steps                  5000
+stepsize                  0.1
+temperature               1.0
+initial_temperature       1
+random_seed             911
+bath_coupling             0.1
+shake_solvent            off
+shake_solute             off
+lrf                      on
+
+[sphere]
+shell_radius 14
+shell_force 20 
+
+[cut_offs]
+
+[intervals]
+non_bond                 25
+output                   50
+
+[files]
+topology       lig_p.top
+fep            lig_p.fep
+final          eq1.re
+ 
+[sequence_restraints]
+1 end 25 0
+

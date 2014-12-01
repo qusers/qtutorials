@@ -1,0 +1,20 @@
+rl ../qoplsaa.lib
+rl ../heme.lib
+rl ../cma.lib
+rprm ../qoplsaa.prm
+
+rp 2cpp_his_asn_gln_noH_fixed_broken_sidechains_18axh2o.pdb
+
+boundary 1 407:C1 20
+
+solvate 407:C1 20 1 HOH
+
+maketop lig
+
+writetop cma.top
+
+writepdb cma_prepped_pre_proq.pdb y
+
+q
+
+

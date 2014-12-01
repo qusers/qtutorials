@@ -1,0 +1,15 @@
+rl ../../qoplsaa.lib
+rl ../../heme.lib
+rl ../../cma.lib
+rprm ../../qoplsaa.prm
+
+rt cma.top
+
+mask none
+mask not excluded
+
+writepdb cma_masked.pdb y
+
+q
+
+

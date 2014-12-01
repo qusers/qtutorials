@@ -1,0 +1,28 @@
+[MD]
+steps                100000
+stepsize                  1.00
+temperature             310.0
+bath_coupling           100
+lrf                      on
+
+[sphere]
+shell_radius             14 
+shell_force              20 
+
+[intervals]
+non_bond                 25
+output                   25
+trajectory            10000
+
+[trajectory_atoms]
+not excluded
+
+[files]
+topology              lig_w.top
+fep                   lig_w.fep
+restart                  dc4.re
+final                    dc5.re
+trajectory               dc5.dcd
+
+[sequence_restraints]
+1 52 5 0 1

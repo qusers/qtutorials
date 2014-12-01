@@ -1,0 +1,2937 @@
+*-----------------------------------------------------------------------
+* General residues
+* MKC: 38-43, 50-51, 53-56
+* AKC: 36, 44-46
+* LKC: 37, 47-49, 52
+* NKC: 59-66 
+* SKC: 67-68, 70 
+* PKC: 77a-77b
+*-----------------------------------------------------------------------
+{MKC}               !Residue name, General residue for most RT inhibitors
+    [info]
+                                       !SYBYLtype  GROUP
+		PDBtype    HETATM
+  [atoms]
+   1 	C1	CA	-0.1150	    ! Aromatic ring  	
+   2 	C2	CA	-0.1150     ! Aromatic ring     
+   3  	H2	HA	 0.1150	    ! Aromatic ring 
+   4  	C3      CA	-0.1150     ! Aromatic ring 
+   5  	C31     CT	-0.0650	    ! Toluene
+   6  	H31	HC	 0.0600	    ! Toluene
+   7  	H32	HC	 0.0600	    ! Toluene
+   8  	H33	HC	 0.0600	    ! Toluene
+   9  	C4      CA	-0.1150     ! Aromatic ring
+  10  	H4	HA	 0.1150	    ! Aromatic ring
+  11  	C5      CA	-0.1150     ! Aromatic ring
+  12  	C51     CT	-0.0650     ! Toluene
+  13  	H51     HC	 0.0600	    ! Toluene
+  14  	H52	HC	 0.0600	    ! Toluene
+  15  	H53	HC	 0.0600	    ! Toluene
+  16  	C6      CA	-0.1150     ! Aromatic ring
+  17  	H6	HA	 0.1150	    ! Aromatic ring
+  18  	CL      CT	 0.1100	    ! Analogy with ethylbenzene, -0.115*2+0.06*2+X=0
+  19  	HL1	HC   	 0.0600	    ! Alkane
+  20  	HL2	HC	 0.0600	    ! Alkane
+  21  	C7      CA	-0.1150     ! Aromatic ring
+  22  	C8      CA	-0.1150     ! Aromatic ring
+  23  	C81     CT      -0.0050     ! Toluene
+  24  	H81     HC	 0.0600	    ! Toluene
+  25 	H82	HC	 0.0600	    ! Toluene
+  26 	C82 	CT	-0.1800	    ! Alkane
+  27 	H83	HC	 0.0600	    ! Alkane
+  28 	H84	HC	 0.0600	    ! Alkane
+  29 	H85	HC	 0.0600	    ! Alkane
+  30 	C9  	CA 	 0.0850	    ! Alkene; -0.115+0.2 = 0.0850, agrees with Cytosine & 266
+  31 	C91 	CT 	-0.0650	    ! Toluene
+  32 	H91	HC	 0.0600	    ! Toluene
+  33 	H92	HC	 0.0600	    ! Toluene
+  34 	H93	HC	 0.0600	    ! Toluene
+  35 	N10 	N       -0.5000	    ! Secondary amide 238
+  36 	H10	H 	 0.3000	    ! Secondary amide 241
+  37 	C11	C        0.5000	    ! Amide 235
+  38 	O11	O	-0.5000	    ! Amide
+  39 	C12	CA	 0.2100	    ! C(NR2) N,N-dimethylaniline 918
+ 
+[bonds] 
+  C1 C2	    ! First ring ("o-Xylene like")
+  C2 C3	
+  C2 H2
+  C3 C31
+  C31 H31
+  C31 H32
+  C31 H33
+  C3 C4
+  C4 H4
+  C4 C5	  
+  C5 C51
+  C51 H51
+  C51 H52
+  C51 H53
+  C5 C6
+  C6 H6
+  C6 C1	  
+  C1 CL	     ! Second ring 
+  CL HL1
+  CL HL2
+  CL C7
+  C7 C8
+  C8 C81
+  C81 H81
+  C81 H82
+  C81 C82
+  C82 H83
+  C82 H84
+  C82 H85
+  C8 C9
+  C9 C91
+  C91 H91
+  C91 H92
+  C91 H93
+  C9 N10
+  N10 H10
+  N10 C11
+  C11 O11
+  C11 C12
+  C12 C7
+ 
+[connections]
+tail C12
+ 
+[impropers]
+CL C1 C2 C6		 ! First ring ("o-Xylene like")
+H2 C2 C3 C1
+C31 C3 C4 C2
+H4 C4 C5 C3
+C51 C5 C6 C4
+H6 C6 C1 C5
+CL C7 C8 C12		 ! Second ring 
+C81 C8 C9 C7
+C91 C9 N10 C8
+H10 N10 C11 C9
+O11 C11 C12 N10
++N12 C12 C7 C11      	 ! Amine is in next residue. must be called N12	
+  
+ [charge_groups]	 ! Charge groups shouldnt matter
+C1 CL HL1 HL2 C7 	 ! For Q atoms since all interactions are calculated with them.
+C2 H2
+C3 C31 H31 H32 H33
+C4 H4
+C5 C51 H51 H52 H53
+C6 H6
+C8 C81 H81 H82 
+C82 H83 H84 H85
+C9 C91 H91 H92 H93 N10 H10
+C11 O11
+C12        		 !  Therefore I can have a lone charge here.      
+
+*-----------------------------------------------------------------------
+{AKC}               !Residue name for S36,S44,S45,S46
+    [info]
+                                       !SYBYLtype  GROUP
+		PDBtype    HETATM
+  [atoms]
+   1 	C1	CA	-0.1150	    ! Aromatic ring  	
+   2 	C2	CA	-0.1150     ! Aromatic ring     
+   3  	H2	HA	 0.1150	    ! Aromatic ring 
+   4  	C3      CA	-0.1150     ! Aromatic ring 
+   5  	C31     CT	-0.0650	    ! Toluene
+   6  	H31	HC	 0.0600	    ! Toluene
+   7  	H32	HC	 0.0600	    ! Toluene
+   8  	H33	HC	 0.0600	    ! Toluene
+   9  	C4      CA	-0.1150     ! Aromatic ring
+  10  	H4	HA	 0.1150	    ! Aromatic ring
+  11  	C5      CA	-0.1150     ! Aromatic ring
+  12  	C51     CT	-0.0650     ! Toluene
+  13  	H51     HC	 0.0600	    ! Toluene
+  14  	H52	HC	 0.0600	    ! Toluene
+  15  	H53	HC	 0.0600	    ! Toluene
+  16  	C6      CA	-0.1150     ! Aromatic ring
+  17  	H6	HA	 0.1150	    ! Aromatic ring
+  18  	CL      CT	 0.1100	    ! Guess (analogy with ethylbenzene) -0.115*2+0.06*2+X=0
+  19  	HL1	HC   	 0.0600	    ! Alkane
+  20  	HL2	HC	 0.0600	    ! Alkane
+  21  	C7      CA	-0.1150     ! Aromatic ring
+  22  	C8      CA	-0.1150     ! Aromatic ring
+  23  	C81     CT      -0.0050     ! Ethyl benzene
+  24  	H81     HC	 0.0600	    ! Ethyl benzene
+  25 	H82	HC	 0.0600	    ! Ethyl benzene
+  26 	C82 	CT	-0.1800	    ! Alkane
+  27 	H83	HC	 0.0600	    ! Alkane
+  28 	H84	HC	 0.0600	    ! Alkane
+  29 	H85	HC	 0.0600	    ! Alkane
+  30 	C9  	CA 	 0.0850	    ! Alkene; -0.115+0.2 = 0.0850. Agrees with Cytosine & 266
+  31 	C91 	CT 	-0.0650	    ! Toluene
+  32 	H91	HC	 0.0600	    ! Toluene
+  33 	H92	HC	 0.0600	    ! Toluene
+  34 	H93	HC	 0.0600	    ! Toluene
+  35 	N10 	N       -0.5000	    ! Secondary amide 238
+  36 	H10	H 	 0.3000	    ! Secondary amide 241
+  37 	C11	C        0.5000	    ! Amide 235
+  38 	O11	O	-0.5000	    ! Amide
+  39 	C12	CA	 0.0850	    ! N-phenylacetamide, 265  
+ 
+[bonds] 
+  C1 C2	    ! First ring ("o-Xylene like")
+  C2 C3	
+  C2 H2
+  C3 C31
+  C31 H31
+  C31 H32
+  C31 H33
+  C3 C4
+  C4 H4
+  C4 C5	  
+  C5 C51
+  C51 H51
+  C51 H52
+  C51 H53
+  C5 C6
+  C6 H6
+  C6 C1	  
+  C1 CL	     ! Second ring 
+  CL HL1
+  CL HL2
+  CL C7
+  C7 C8
+  C8 C81
+  C81 H81
+  C81 H82
+  C81 C82
+  C82 H83
+  C82 H84
+  C82 H85
+  C8 C9
+  C9 C91
+  C91 H91
+  C91 H92
+  C91 H93
+  C9 N10
+  N10 H10
+  N10 C11
+  C11 O11
+  C11 C12
+  C12 C7
+ 
+[connections]
+tail C12
+ 
+[impropers]
+ CL C1 C2 C6		 ! First ring ("o-Xylene like")
+ H2 C2 C3 C1
+ C31 C3 C4 C2
+ H4 C4 C5 C3
+ C51 C5 C6 C4
+ H6 C6 C1 C5
+ CL C7 C8 C12		 ! Second ring 
+ C81 C8 C9 C7
+ C91 C9 N10 C8
+ H10 N10 C11 C9
+ O11 C11 C12 N10
+ +N12 C12 C7 C11      	 ! Amin is in next residue. must be called N12	
+  
+ [charge_groups]	 ! Charge groups shouldnt matter
+C1 CL HL1 HL2 C7 	 ! For Q atoms since all interactions are calculated with them.
+C2 H2
+C3 C31 H31 H32 H33
+C4 H4
+C5 C51 H51 H52 H53
+C6 H6
+C8 C81 H81 H82 
+C82 H83 H84 H85
+C9 C91 H91 H92 H93 N10 H10
+C11 O11
+C12        		 !  Therefore I can have a lone charge here.      
+
+*-----------------------------------------------------------------------
+{LKC}               !Residue name for S37,47,48,49,52
+    [info]
+                                       !SYBYLtype  GROUP
+		PDBtype    HETATM
+  [atoms]
+   1 	C1	CA	-0.1150	    ! Aromatic ring  	
+   2 	C2	CA	-0.1150     ! Aromatic ring     
+   3  	H2	HA	 0.1150	    ! Aromatic ring 
+   4  	C3      CA	-0.1150     ! Aromatic ring 
+   5  	C31     CT	-0.0650	    ! Toluene
+   6  	H31	HC	 0.0600	    ! Toluene
+   7  	H32	HC	 0.0600	    ! Toluene
+   8  	H33	HC	 0.0600	    ! Toluene
+   9  	C4      CA	-0.1150     ! Aromatic ring
+  10  	H4	HA	 0.1150	    ! Aromatic ring
+  11  	C5      CA	-0.1150     ! Aromatic ring
+  12  	C51     CT	-0.0650     ! Toluene
+  13  	H51     HC	 0.0600	    ! Toluene
+  14  	H52	HC	 0.0600	    ! Toluene
+  15  	H53	HC	 0.0600	    ! Toluene
+  16  	C6      CA	-0.1150     ! Aromatic ring
+  17  	H6	HA	 0.1150	    ! Aromatic ring
+  18  	CL      CT	 0.1100	    ! Guess (analogy with ethylbenzene) -0.115*2+0.06*2+X=0
+  19  	HL1	HC   	 0.0600	    ! Alkane
+  20  	HL2	HC	 0.0600	    ! Alkane
+  21  	C7      CA	-0.1150     ! Aromatic ring
+  22  	C8      CA	-0.1150     ! Aromatic ring
+  23  	C81     CT      -0.0050     ! Toluene
+  24  	H81     HC	 0.0600	    ! Toluene
+  25 	H82	HC	 0.0600	    ! Toluene
+  26 	C82 	CT	-0.1800	    ! Alkane
+  27 	H83	HC	 0.0600	    ! Alkane
+  28 	H84	HC	 0.0600	    ! Alkane
+  29 	H85	HC	 0.0600	    ! Alkane
+  30 	C9  	CA 	 0.0850	    ! Alkene;  -0.115+0.2 = 0.0850, Agrees with Cytosine & 266
+  31 	C91 	CT 	-0.0650	    ! Toluene
+  32 	H91	HC	 0.0600	    ! Toluene
+  33 	H92	HC	 0.0600	    ! Toluene
+  34 	H93	HC	 0.0600	    ! Toluene
+  35 	N10 	N       -0.5000	    ! Secondary amide 238
+  36 	H10	H 	 0.3000	    ! Secondary amide 241
+  37 	C11	C        0.5000	    ! Amide 235
+  38 	O11	O	-0.5000	    ! Amide
+  39 	C12	CA	 0.2000	    ! 917 C(NHR) N-methylaniline   
+ 
+[bonds] 
+  C1 C2	    ! First ring ("o-Xylene like")
+  C2 C3	
+  C2 H2
+  C3 C31
+  C31 H31
+  C31 H32
+  C31 H33
+  C3 C4
+  C4 H4
+  C4 C5	  
+  C5 C51
+  C51 H51
+  C51 H52
+  C51 H53
+  C5 C6
+  C6 H6
+  C6 C1	  
+  C1 CL	     ! Second ring 
+  CL HL1
+  CL HL2
+  CL C7
+  C7 C8
+  C8 C81
+  C81 H81
+  C81 H82
+  C81 C82
+  C82 H83
+  C82 H84
+  C82 H85
+  C8 C9
+  C9 C91
+  C91 H91
+  C91 H92
+  C91 H93
+  C9 N10
+  N10 H10
+  N10 C11
+  C11 O11
+  C11 C12
+  C12 C7
+ 
+[connections]
+tail C12
+ 
+[impropers]
+CL C1 C2 C6		 ! First ring ("o-Xylene like")
+H2 C2 C3 C1
+C31 C3 C4 C2
+H4 C4 C5 C3
+C51 C5 C6 C4
+H6 C6 C1 C5
+CL C7 C8 C12		 ! Second ring 
+C81 C8 C9 C7
+C91 C9 N10 C8
+H10 N10 C11 C9
+O11 C11 C12 N10
++N12 C12 C7 C11      	 ! Amin is in next residue. must be called N12	
+  
+ [charge_groups]	 ! Charge groups shouldnt matter
+   C1 CL HL1 HL2 C7 	 ! For Q atoms since all interactions are calculated with them.
+   C2 H2
+   C3 C31 H31 H32 H33
+   C4 H4
+   C5 C51 H51 H52 H53
+   C6 H6
+   C8 C81 H81 H82 
+   C82 H83 H84 H85
+   C9 C91 H91 H92 H93 N10 H10
+   C11 O11
+   C12        		 !  Therefore I can have a lone charge here.   
+*-----------------------------------------------------------------------   
+{NKC}               !Residue name, used for just 2' benzene subsituents
+    [info]
+                                       !SYBYLtype  GROUP
+		PDBtype    HETATM
+  [atoms]
+   1 	C1	CA	-0.1150	    ! Aromatic ring  	
+   2 	C2	CA	-0.1150     ! Aromatic ring     
+   3  	H2	HA	 0.1150	    ! Aromatic ring 
+   4  	C3      CA	-0.1150     ! Aromatic ring 
+   5  	H3	HA	 0.1150	    ! Aromatic ring 
+   6  	C4      CA	-0.1150     ! Aromatic ring
+   7  	H4	HA	 0.1150	    ! Aromatic ring
+   8  	C5      CA	-0.1150     ! Aromatic ring
+   9  	C51     CT	-0.0650     ! Toluene
+  10  	H51     HC	 0.0600	    ! Toluene
+  11  	H52	HC	 0.0600	    ! Toluene
+  12  	H53	HC	 0.0600	    ! Toluene
+  13  	C6      CA	-0.1150     ! Aromatic ring
+  14  	H6	HA	 0.1150	    ! Aromatic ring
+  15  	CL      CT	 0.1100	    ! Guess (analogy with ethylbenzene) -0.115*2+0.06*2+X=0
+  16  	HL1	HC   	 0.0600	    ! Alkane
+  17  	HL2	HC	 0.0600	    ! Alkane
+  18  	C7      CA	-0.1150     ! Aromatic ring
+  19  	C8      CA	-0.1150     ! Aromatic ring
+  20  	C81     CT      -0.0050     ! Ethyl benzene
+  21  	H81     HC	 0.0600	    ! Ethyl benzene
+  22  	H82	HC	 0.0600	    ! Ethyl benzene
+  23  	C82 	CT	-0.1800	    ! Alkane
+  24  	H83	HC	 0.0600	    ! Alkane
+  25 	H84	HC	 0.0600	    ! Alkane
+  26 	H85	HC	 0.0600	    ! Alkane
+  27 	C9  	CA	 0.0850	    ! Alkene; -0.115+0.2 = 0.0850,  Agrees with Cytosine & 266
+  28 	C91 	CT 	-0.0650	    ! Toluene
+  29 	H91	HC	 0.0600	    ! Toluene
+  30 	H92	HC	 0.0600	    ! Toluene
+  31 	H93	HC	 0.0600	    ! Toluene
+  32 	N10 	N       -0.5000	    ! Secondary amide 238
+  33 	H10	H 	 0.3000	    ! Secondary amide 241
+  34 	C11	C        0.5000	    ! Amide 235
+  35 	O11	O	-0.5000	    ! Amide
+  36 	C12	CA	 0.2100	    ! C(NR2) N,N-dimethylaniline 918
+   	
+   	
+[bonds] 
+  C1 C2	    ! First ring ("o-Xylene like")
+  C2 C3	
+  C2 H2
+  C3 H3
+  C3 C4
+  C4 H4
+  C4 C5	  
+  C5 C51
+  C51 H51
+  C51 H52
+  C51 H53
+  C5 C6
+  C6 H6
+  C6 C1	  
+  C1 CL	     ! Second ring 
+  CL HL1
+  CL HL2
+  CL C7
+  C7 C8
+  C8 C81
+  C81 H81
+  C81 H82
+  C81 C82
+  C82 H83
+  C82 H84
+  C82 H85
+  C8 C9
+  C9 C91
+  C91 H91
+  C91 H92
+  C91 H93
+  C9 N10
+  N10 H10
+  N10 C11
+  C11 O11
+  C11 C12
+  C12 C7
+ 
+[connections]
+tail C12
+ 
+[impropers]
+  CL C1 C2 C6		 ! First ring ("o-Xylene like")
+  H2 C2 C3 C1
+  H3 C3 C4 C2
+  H4 C4 C5 C3
+  C51 C5 C6 C4
+  H6 C6 C1 C5
+  CL C7 C8 C12		 ! Second ring 
+  C81 C8 C9 C7
+  C91 C9 N10 C8
+  H10 N10 C11 C9
+  O11 C11 C12 N10
+ +N12 C12 C7 C11      	 ! Amin is in next residue. must be called N12	
+  
+ [charge_groups]	 ! Charge groups shouldnt matter
+   C1 CL HL1 HL2 C7 	 ! For Q atoms since all interactions are calculated with them.
+   C2 H2
+   C3 H3
+   C4 H4
+   C5 C51 H51 H52 H53
+   C6 H6
+   C8 C81 H81 H82 
+   C82 H83 H84 H85
+   C9 C91 H91 H92 H93 N10 H10
+   C11 O11
+   C12        		 !  Therefore I can have a lone charge here.      
+
+*-----------------------------------------------------------------------
+{SKC}               !Residue name for ligands S67, 68, 70 
+    [info]
+                                       !SYBYLtype  GROUP
+		PDBtype    HETATM
+  [atoms]
+   1 	C1	CA	-0.1150	    ! Aromatic ring  	
+   2 	C2	CA	-0.1150     ! Aromatic ring     
+   3  	H2	HA	 0.1150	    ! Aromatic ring 
+   4  	C3      CA	-0.1150     ! Aromatic ring 
+   5  	H3	HA	 0.1150	    ! Aromatic ring 
+   6  	C4      CA	-0.1150     ! Aromatic ring
+   7  	H4	HA	 0.1150	    ! Aromatic ring
+   8  	C5      CA	-0.1150     ! Aromatic ring
+   9  	C51     CT	-0.0650     ! Toluene
+  10  	H51     HC	 0.0600	    ! Toluene
+  11  	H52	HC	 0.0600	    ! Toluene
+  12  	H53	HC	 0.0600	    ! Toluene
+  13  	C6      CA	-0.1150     ! Aromatic ring
+  14  	H6	HA	 0.1150	    ! Aromatic ring
+  15  	CL      CT	 0.1100	    ! Guess (analogy with ethylbenzene) -0.115*2+0.06*2+X=0
+  16  	HL1	HC   	 0.0600	    ! Alkane
+  17  	HL2	HC	 0.0600	    ! Alkane
+  18  	C7      CA	-0.1150     ! Aromatic ring
+  19  	C8      CA	-0.1150     ! Aromatic ring
+  20  	C81     CT      -0.0050     ! Ethyl benzene
+  21  	H81     HC	 0.0600	    ! Ethyl benzene
+  22  	H82	HC	 0.0600	    ! Ethyl benzene
+  23  	C82 	CT	-0.1800	    ! Alkane
+  24  	H83	HC	 0.0600	    ! Alkane
+  25 	H84	HC	 0.0600	    ! Alkane
+  26 	H85	HC	 0.0600	    ! Alkane
+  27 	C9  	CA	 0.0850	    ! Alkene; -0.115+0.2 = 0.0850,  Agrees with Cytosine & 266
+  28 	C91 	CT 	-0.0650	    ! Toluene
+  29 	H91	HC	 0.0600	    ! Toluene
+  30 	H92	HC	 0.0600	    ! Toluene
+  31 	H93	HC	 0.0600	    ! Toluene
+  32 	N10 	N       -0.5000	    ! Secondary amide 238
+  33 	H10	H 	 0.3000	    ! Secondary amide 241
+  34 	C11	C        0.5000	    ! Amide 235
+  35 	O11	O	-0.5000	    ! Amide
+  36 	C12	CA	 0.0850	    ! C(NR2) N,N-dimethylaniline 918
+   	
+   	
+[bonds] 
+  C1 C2	    ! First ring ("o-Xylene like")
+  C2 C3	
+  C2 H2
+  C3 H3
+  C3 C4
+  C4 H4
+  C4 C5	  
+  C5 C51
+  C51 H51
+  C51 H52
+  C51 H53
+  C5 C6
+  C6 H6
+  C6 C1	  
+  C1 CL	     ! Second ring 
+  CL HL1
+  CL HL2
+  CL C7
+  C7 C8
+  C8 C81
+  C81 H81
+  C81 H82
+  C81 C82
+  C82 H83
+  C82 H84
+  C82 H85
+  C8 C9
+  C9 C91
+  C91 H91
+  C91 H92
+  C91 H93
+  C9 N10
+  N10 H10
+  N10 C11
+  C11 O11
+  C11 C12
+  C12 C7
+ 
+[connections]
+tail C12
+ 
+[impropers]
+  CL C1 C2 C6		 ! First ring ("o-Xylene like")
+  H2 C2 C3 C1
+  H3 C3 C4 C2
+  H4 C4 C5 C3
+  C51 C5 C6 C4
+  H6 C6 C1 C5
+  CL C7 C8 C12		 ! Second ring 
+  C81 C8 C9 C7
+  C91 C9 N10 C8
+  H10 N10 C11 C9
+  O11 C11 C12 N10
+ +N12 C12 C7 C11      	 ! Amin is in next residue. must be called N12	
+  
+ [charge_groups]	 ! Charge groups shouldnt matter
+   C1 CL HL1 HL2 C7 	 ! For Q atoms since all interactions are calculated with them.
+   C2 H2
+   C3 H3
+   C4 H4
+   C5 C51 H51 H52 H53
+   C6 H6
+   C8 C81 H81 H82 
+   C82 H83 H84 H85
+   C9 C91 H91 H92 H93 N10 H10
+   C11 O11
+   C12        		 !  Therefore I can have a lone charge here.      
+*-----------------------------------------------------------------------
+{PKC}               	       !Residue name for ligands S77a,b
+    [info]
+                                       !SYBYLtype  GROUP
+		PDBtype    HETATM
+  [atoms]
+   1 	C1	CA	-0.1150	    ! Aromatic ring  	
+   2 	C2	CA	-0.1150     ! Aromatic ring     
+   3  	H2	HA	 0.1150	    ! Aromatic ring 
+   4  	C3      CA	-0.1150     ! Aromatic ring, test using new idea 
+   5    C31	CM	 0.0000     ! Guess, analogy with ethylbenzene yields 0.000, alkene
+   6	H31	HM	 0.1150	    ! Alkene
+   7	C32	CM	-0.0800	    ! -0.115+0.035 (260)
+   8    H32	HM	 0.1150
+   9	C33	CN1	 0.3950	    ! Benzonitrile, 261
+   10	N33	NN	-0.4300     ! Benzonitrile, 262
+   11 	C4      CA	-0.1150     ! Aromatic ring
+   12 	H4	HA	 0.1150	    ! Aromatic ring
+   13 	C5      CA	-0.1150     ! Aromatic ring
+   14   H5	HA       0.1150     ! Aromatic ring
+   15 	C6      CA	-0.1150     ! Aromatic ring
+   16 	H6	HA	 0.1150	    ! Aromatic ring
+   17 	CL      CT	 0.1100	    ! Guess (analogy with ethylbenzene) -0.115*2+0.06*2+X=0
+   18 	HL1	HC   	 0.0600	    ! Alkane
+   19 	HL2	HC	 0.0600	    ! Alkane
+   20 	C7      CA	-0.1150     ! Aromatic ring
+   21 	C8      CA	-0.1150     ! Aromatic ring
+   22 	C81     CT      -0.0050     ! Ethyl benzene
+   23 	H81     HC	 0.0600	    ! Ethyl benzene
+   24 	H82	HC	 0.0600	    ! Ethyl benzene
+   25 	C82 	CT	-0.1800	    ! Alkane
+   26 	H83	HC	 0.0600	    ! Alkane
+   27	H84	HC	 0.0600	    ! Alkane
+   28	H85	HC	 0.0600	    ! Alkane
+   29	C9  	CA 	 0.0850	    ! Alkene; -0.115+0.2 = 0.0850,  Agrees with Cytosine & 266
+   30	C91 	CT 	-0.0650	    ! Toluene
+   31	H91	HC	 0.0600	    ! Toluene
+   32	H92	HC	 0.0600	    ! Toluene
+   33	H93	HC	 0.0600	    ! Toluene
+   34	N10 	N       -0.5000	    ! Secondary amide 238
+   35	H10	H 	 0.3000	    ! Secondary amide 241
+   36	C11	C        0.5000	    ! Amide 235
+   37	O11	O	-0.5000	    ! Amide
+   38	C12	CA	 0.2100	    ! C(NR2) N,N-dimethylaniline 918
+   	
+   	
+[bonds] 
+  C1 C2	    ! First ring ("o-Xylene like")
+  C2 C3	
+  C2 H2
+  C3 C31
+  C31 H31
+  C31 C32
+  C32 H32
+  C32 C33
+  C33 N33
+  C3 C4
+  C4 H4
+  C4 C5	  
+  C5 H5
+  C5 C6
+  C6 H6
+  C6 C1	  
+  C1 CL	     ! Second ring 
+  CL HL1
+  CL HL2
+  CL C7
+  C7 C8
+  C8 C81
+  C81 H81
+  C81 H82
+  C81 C82
+  C82 H83
+  C82 H84
+  C82 H85
+  C8 C9
+  C9 C91
+  C91 H91
+  C91 H92
+  C91 H93
+  C9 N10
+  N10 H10
+  N10 C11
+  C11 O11
+  C11 C12
+  C12 C7
+ 
+[connections]
+tail C12
+ 
+[impropers]
+  CL C1 C2 C6		 ! First ring ("o-Xylene like")
+  H2 C2 C3 C1
+  C31 C3 C4 C2
+  H31 C31 C32 C3
+  H32 C32 C33 C31
+  H4 C4 C5 C3
+  H5 C5 C6 C4
+  H6 C6 C1 C5
+  CL C7 C8 C12		 ! Second ring 
+  C81 C8 C9 C7
+  C91 C9 N10 C8
+  H10 N10 C11 C9
+  O11 C11 C12 N10
+ +N12 C12 C7 C11      	 ! Amin is in next residue. must be called N12	
+  
+ [charge_groups]	 ! Charge groups shouldnt matter
+   C1 CL HL1 HL2 C7 	 ! For Q atoms since all interactions are calculated with them.
+   C2 H2
+   C3 C31 H31
+   C32 H32 C33 N33 
+   C4 H4
+   C5 H5
+   C6 H6
+   C8 C81 H81 H82 
+   C82 H83 H84 H85
+   C9 C91 H91 H92 H93 N10 H10
+   C11 O11
+   C12        		 !  Therefore I can have a lone charge here.      
+
+*-----------------------------------------------------------------------
+{S36}               ! Substituent for ligand 36    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NAM	-0.3850	    ! N-phenylacetamide   265	   
+   2 	H1	H	 0.3000     ! R1, secondary amide 241
+   3  	C1	C	 0.5000	    ! R2, C=O in amide 235
+   4	O1	O	-0.5000     ! C=O in amide 236		
+   5	H11     HAM	 0.0000     ! H-alpha in aldehyde & formamide 279 
+   
+   ! Sum of charges is -0.085 to compensate for 0.085 on CA in AKC
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 O1
+C1 H11
+  
+[connections]
+head N12
+
+[impropers]
+O1 C1 H11 N12		
+H1 N12 C1 -C12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 O1 H11
+*-----------------------------------------------------------------------
+{S37}               ! Substituent for ligand 37    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.7800	    ! 901	   
+   2 	H1	H	 0.3800     ! 910    
+   3  	C1	CT	 0.0200	    ! 904
+   4  	H11     HN	 0.0600     ! 911
+   5  	H12     HN	 0.0600	    ! 911
+   6  	H13	HN	 0.0600	    ! 911 
+   
+   ! Sum of charges is -0.20 to compensate for 0.20 on CA
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 H11
+C1 H12
+C1 H13
+  
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 H11 H12 H13
+*-----------------------------------------------------------------------
+{S38}               ! Substituent for ligand 38    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! Tertiary amine  902	 
+   2	C1	CT	 0.090		! 908
+   3	H11	HN	 0.060	    	! 911
+   4	H12	HN	 0.060	    	! 911
+   5	C2	CT	-0.180
+   6	H21     HC	 0.060     
+   7  	H22     HC	 0.060	    
+   8  	H23	HC	 0.060	 
+   9 	C3	CT	 0.030		! 905         
+   10  	H31     HN	 0.060      	! 911
+   11  	H32     HN	 0.060	   	! 911
+   12 	H33	HN	 0.060          ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+  
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 H23 
+N12 C3
+C3 H31
+C3 H32
+C3 H33
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 H23 C3 H31 H32 H33
+*-----------------------------------------------------------------------
+{S39}               ! Substituent for ligand 39    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! Tertiary amine  902	 
+   2	C1	CT	 0.090		! 908
+   3	H11	HN	 0.060	    	! 911
+   4	H12	HN	 0.060	    	! 911
+   5	C2	CT	-0.120
+   6	H21     HC	 0.060     
+   7  	H22     HC	 0.060	    
+   8	C3	CT	-0.180
+   9	H31     HC	 0.060     
+   10  	H32     HC	 0.060	    
+   11  	H33	HC	 0.060	 
+   12 	C4	CT	 0.030 		! 905         
+   13  	H41     HN	 0.060      	! 911
+   14  	H42     HN	 0.060	   	! 911
+   15 	H43	HN	 0.060	        ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 H33 
+N12 C4
+C4 H41
+C4 H42
+C4 H43
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 C3 H31 H32 H33 C4 H41 H42 H43
+*-----------------------------------------------------------------------
+{S40}               ! Substituent for ligand 40    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! 902	 
+   2	C1	CT	 0.150		! 915
+   3	H11	HN	 0.060	    	! 911
+   4	C2	CT	 0.140		! 182
+   5	H21     HC	 0.030     	! 185
+   6  	H22     HC	 0.030     	! 185
+   7 	O3	OS	-0.400		! 180
+   8 	C4	CT	 0.110 		! 181         
+   9  	H41     HC	 0.030     	! 185
+   10 	H42     HC	 0.030     	! 185
+   11 	H43	HC	 0.030     	! 185
+   12	C5	CT	-0.180	
+   13  	H51     HC	 0.060
+   14  	H52     HC	 0.060
+   15 	H53	HC	 0.060
+   16 	C6	CT	 0.030 		! 905         
+   17  	H61     HN	 0.060      	! 911
+   18  	H62     HN	 0.060	   	! 911
+   19 	H63	HN	 0.060	        ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 C2
+C2 H21
+C2 H22
+C2 O3
+O3 C4
+C4 H41
+C4 H42
+C4 H43
+C1 C5
+C5 H51
+C5 H52
+C5 H53
+N12 C6
+C6 H61
+C6 H62
+C6 H63
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 C2 H21 H22 O3 C4 H41 H42 H43 C5 H51 H52 H53 C6 H61 H62 H63
+*-----------------------------------------------------------------------
+{S41}               ! Substituent for ligand 41    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.6300	  	! Tertiary amine  902	 
+   2	C1	CT	 0.0900		! 908
+   3	H11	HN	 0.0600	    	! 911
+   4	H12	HN	 0.0600	    	! 911
+   5	C2	CT	-0.1200
+   6	H21     HC	 0.0600     
+   7  	H22     HC	 0.0600	    
+   8	C3	CT       0.0975		! 210
+   9	H31     HC	 0.0600    
+   10  	H32     HC	 0.0600            
+   11	S4 	S	-0.4350        	! 202
+   12 	C5	CT	 0.0375        	! 209         
+   13  	H51     HC	 0.0600             
+   14  	H52     HC	 0.0600           
+   15 	H53	HC	 0.0600             
+   16 	C6	CT	 0.0300		! 905         
+   17  	H61     HN	 0.0600      	! 911
+   18  	H62     HN	 0.0600	   	! 911
+   19 	H63	HN	 0.0600	        ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 S4
+S4 C5
+C5 H51
+C5 H52
+C5 H53
+N12 C6
+C6 H61
+C6 H62
+C6 H63
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 C3 H31 H32 S4 C5 H51 H52 H53 C6 H61 H62 H63
+*-----------------------------------------------------------------------
+{S42}               ! Substituent for ligand 42    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.6300   	! 902	 
+   2	C1	CT	 0.0900		! 908
+   3	H11	HN	 0.0600	    	! 911
+   4	H12	HN	 0.0600		! 911
+   5	C2	CT	 0.1400		! 182
+   6 	H21     HC	 0.0300     	! 185
+   7 	H22     HC	 0.0300     	! 185
+   8 	O3	OS	-0.4000		! 180
+   9 	C4	CT	 0.1100 	! 181         
+   10	H41     HC	 0.0300     	! 185
+   11	H42     HC	 0.0300     	! 185
+   12	H43	HC	 0.0300     	! 185
+   13 	C5	CT	 0.0300		! 905         
+   14  	H51     HN	 0.0600      	! 911
+   15  	H52     HN	 0.0600	   	! 911
+   16 	H53	HN	 0.0600	        ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 O3
+O3 C4
+C4 H41
+C4 H42
+C4 H43
+N12 C5
+C5 H51
+C5 H52
+C5 H53
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 O3 C4 H41 H42 H43 C5 H51 H52 H53
+*-----------------------------------------------------------------------
+{S43}               ! Substituent for ligand 43    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! Tertiary amine  902	 
+   2	C1	CT	 0.090		! 908
+   3	H11	HN	 0.060	    	! 911
+   4	H12	HN	 0.060	    	! 911
+   5	C2	CT	-0.120
+   6	H21     HC	 0.060     
+   7  	H22     HC	 0.060	    
+   8	C3	CT	-0.120
+   9	H31     HC	 0.060     
+   10  	H32     HC	 0.060
+   11	C4	CT	-0.120
+   12	H41     HC	 0.060     
+   13  	H42     HC	 0.060
+   14	C5	CT	 0.145		! 157	
+   15	H51     HC	 0.060     
+   16  	H52     HC	 0.060
+   17	O6	OH   	-0.683		! 154
+   18	H6	HO    	 0.418		! 155
+   19 	C7	CT	 0.030		! 905         
+   20  	H71     HN	 0.060      	! 911
+   21  	H72     HN	 0.060	   	! 911
+   22 	H73	HN	 0.060	        ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CM
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 C4
+C4 H41
+C4 H42
+C4 C5
+C5 H51
+C5 H52
+C5 O6
+O6 H6
+N12 C7
+C7 H71
+C7 H72
+C7 H73
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 C3 H31 H32 C4 H41 H42 C5 H51 H52 O6 H6 C7 H71 H72 H73
+*-----------------------------------------------------------------------
+{S44}               ! Substituent for ligand 44    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NAM	-0.3850	    ! N-phenylacetamide   265	   
+   2 	H1	H	 0.3000     ! R1, secondary amide 241
+   3  	C1	C	 0.5000	    ! R2, C=O in amide 235
+   4	O1	O	-0.5000     ! C=O in amide 236		
+   5	C2	CT	-0.1800
+   6	H21     HC	 0.0600     
+   7 	H22     HC	 0.0600	    
+   8  	H23	HC	 0.0600	 
+   
+   ! Sum of charges is -0.085 to compensate for 0.085 on CA in AKC
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 O1
+C1 C2
+C2 H21
+C2 H22
+C2 H23
+  
+[connections]
+head N12
+
+[impropers]
+O1 C1 C2 N12	
+H1 N12 C1 -C12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 O1 C2 H21 H22 H23
+*-----------------------------------------------------------------------
+{S45}               ! Substituent for ligand 45    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NAM	-0.3850	    ! N-phenylacetamide   265	   
+   2 	H1	H	 0.3000     ! R1, secondary amide 241
+   3  	C1	C	 0.5000	    ! R2, C=O in amide 235
+   4	O1	O	-0.5000     ! C=O in amide 236		
+   5	C2	CT	-0.1200
+   6	H21     HC	 0.0600     
+   7 	H22     HC	 0.0600	        
+   8	C3	CT	-0.1800
+   9	H31     HC	 0.0600     
+   10 	H32     HC	 0.0600	    
+   11  	H33	HC	 0.0600	 
+   
+   ! Sum of charges is -0.085 to compensate for 0.085 on CA in AKC
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 O1
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 H33
+  
+[connections]
+head N12
+
+[impropers]
+O1 C1 C2 N12	
+H1 N12 C1 -C12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 O1 C2 H21 H22 C3 H31 H32 H33
+*-----------------------------------------------------------------------
+{S46}               ! Substituent for ligand 46    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NAM	-0.3850	    ! N-phenylacetamide   265	   
+   2 	H1	H	 0.3000     ! R1, secondary amide 241
+   3  	C1	C	 0.5000	    ! R2, C=O in amide 235
+   4	O1	O	-0.5000     ! C=O in amide 236		
+   5	C2	CT	-0.1200
+   6	H21     HC	 0.0600     
+   7 	H22     HC	 0.0600	
+   8	C3	CT	-0.1200
+   9	H31     HC	 0.0600     
+   10 	H32     HC	 0.0600	
+   11	C4	CT	-0.1800
+   12	H41     HC	 0.0600     
+   13 	H42     HC	 0.0600	    
+   14  	H43	HC	 0.0600	 
+   
+   ! Sum of charges is -0.085 to compensate for 0.085 on CA in AKC
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 O1
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 C4
+C4 H41
+C4 H42
+C4 H43
+  
+[connections]
+head N12
+
+[impropers]
+O1 C1 C2 N12	
+H1 N12 C1 -C12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 O1 C2 H21 H22 C3 H31 H32 C4 H41 H42 H43
+*-----------------------------------------------------------------------
+{S47}               ! Substituent for ligand 47    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.7800	    ! Secondary amine  901	   
+   2 	H1	H	 0.3800     ! Secondary amine  910    
+   3  	C1	CT	 0.0800	    ! Secondary amine  907
+   4  	H11     HN	 0.0600     ! Secondary amine  911
+   5  	H12     HN	 0.0600	    ! Secondary amine  911
+   6	C2	CT	-0.1800
+   7	H21     HC	 0.0600     
+   8 	H22     HC	 0.0600	    
+   9  	H23	HC	 0.0600	 
+   
+   ! Sum of charges is -0.20 to compensate for 0.20 on CA
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 H23
+  
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 H11 H12 C2 H21 H22 H23
+*-----------------------------------------------------------------------
+{S48}               ! Substituent for ligand 48    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.7800	    ! Secondary amine  901	   
+   2 	H1	H	 0.3800     ! Secondary amine  910    
+   3  	C1	CT	 0.0800	    ! Secondary amine  907
+   4  	H11     HN	 0.0600     ! Secondary amine  911
+   5  	H12     HN	 0.0600	    ! Secondary amine  911
+   6	C2	CT	-0.1200
+   7	H21     HC	 0.0600     
+   8  	H22     HC	 0.0600	
+   9	C3	CT	-0.1800
+   10	H31     HC	 0.0600     
+   11	H32     HC	 0.0600	    
+   12 	H33	HC	 0.0600	 
+   
+   ! Sum of charges is -0.20 to compensate for 0.20 on CM
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 H33
+  
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 H11 H12 C2 H21 H22 C3 H31 H32 H33
+*-----------------------------------------------------------------------
+{S49}               ! Substituent for ligand 49    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.7800	    ! Secondary amine  901	   
+   2 	H1	H	 0.3800     ! Secondary amine  910    
+   3  	C1	CT	 0.0800	    ! Secondary amine  907
+   4  	H11     HN	 0.0600     ! Secondary amine  911
+   5  	H12     HN	 0.0600	    ! Secondary amine  911
+   6	C2	CT	-0.1200
+   7	H21     HC	 0.0600     
+   8  	H22     HC	 0.0600
+   9	C3	CT	-0.1200
+   10	H31     HC	 0.0600     
+   11  	H32     HC	 0.0600
+   12	C4	CT	-0.1800
+   13	H41     HC	 0.0600     
+   14	H42     HC	 0.0600	    
+   15 	H43	HC	 0.0600	 
+   
+   ! Sum of charges is -0.20 to compensate for 0.20 on CA
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 C4
+C4 H41
+C4 H42
+C4 H43
+  
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 H11 H12 C2 H21 H22 C3 H31 H32 C4 H41 H42 H43
+*-----------------------------------------------------------------------
+{S50}               ! Substituent for ligand 50    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! Tertiary amine  902	 
+   2	C1	CT	 0.090		! 908
+   3	H11	HN	 0.060	    	! 911
+   4	H12	HN	 0.060	    	! 911
+   5	C2	CT	-0.180
+   6	H21     HC	 0.060     
+   7  	H22     HC	 0.060	    
+   8  	H23	HC	 0.060	 
+   9	C3	CT	 0.090		! 908
+   10	H31	HN	 0.060	    	! 911
+   11	H32	HN	 0.060    	! 911
+   12	C4	CT	-0.180
+   13	H41     HC	 0.060     
+   14 	H42     HC	 0.060	    
+   15 	H43	HC	 0.060	 
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CM
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 H23 
+N12 C3
+C3 H31
+C3 H32
+C3 C4
+C4 H41
+C4 H42
+C4 H43 
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 H23 C3 H31 H32 C4 H41 H42 H43
+*-----------------------------------------------------------------------
+{S51}               ! Substituent for ligand 51    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! Tertiary amine  902	 
+   2	C1	CT	 0.090		! 908
+   3	H11	HN	 0.060	    	! 911
+   4	H12	HN	 0.060	    	! 911
+   5	C2	CT	-0.120
+   6	H21     HC	 0.060     
+   7  	H22     HC	 0.060	    
+   8	C3	CT	-0.120
+   9	H31     HC	 0.060     
+   10  	H32     HC	 0.060	     
+   11 	C4	CT	-0.180	        
+   12  	H41     HC	 0.060      	
+   13  	H42     HC	 0.060	   	
+   14 	H43	HC	 0.060
+   15	C5	CT	 0.090		! 908
+   16	H51	HN	 0.060	    	! 911
+   17	H52	HN	 0.060	    	! 911
+   18	C6	CT	-0.120
+   19	H61     HC	 0.060  
+   20 	H62     HC	 0.060	 
+   21	C7	CT	-0.120
+   22	H71     HC	 0.060  
+   23  	H72     HC	 0.060	 
+   24 	C8	CT	-0.180
+   25  	H81     HC	 0.060  
+   26  	H82     HC	 0.060	 
+   27 	H83	HC	 0.060
+                         
+   ! Sum of charges is -0.21 to compensate for 0.21 on CM
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 C4
+C4 H41
+C4 H42
+C4 H43
+N12 C5
+C5 H51
+C5 H52
+C5 C6
+C6 H61
+C6 H62
+C6 C7
+C7 H71
+C7 H72
+C7 C8
+C8 H81
+C8 H82
+C8 H83
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 C3 H31 H32 C4 H41 H42 H43 C5 H51 H52 C6 H61 H62 C7 H71 H72 C8 H81 H82 H83
+*-----------------------------------------------------------------------
+{S52}               ! Substituent for ligand 52    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.780	    ! 901   
+   2 	H1	H	 0.380      ! 910  
+   3  	C1	CT	 0.195	    ! 907+148  0.08+0.115=0.195
+   4  	H11     HN	 0.060      ! 911
+   5  	H12     HN	 0.060	    ! 911
+   6 	C2	CA	-0.115	       	
+   7 	C3	CA	-0.115            
+   8  	H3	HA	 0.115	      
+   9  	C4      CA	-0.115       
+   10  	H4	HA	 0.115	      
+   11  	C5      CA	-0.115       
+   12  	H5	HA	 0.115	      
+   13  	C6      CA	-0.115       
+   14  	H6	HA	 0.115	      
+   15  	C7      CA	-0.115       
+   16  	H7	HA	 0.115 	     
+   
+   ! Sum of charges is -0.20 to compensate for 0.20 on CA
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 C3
+C3 H3
+C3 C4
+C4 H4
+C4 C5
+C5 H5
+C5 C6
+C6 H6
+C6 C7
+C7 H7
+C2 C7
+  
+[connections]
+head N12
+
+[impropers]
+C1 C2 C3 C7		 ! First ring 
+H3 C3 C4 C2
+H4 C4 C5 C3
+H5 C5 C6 C4
+H6 C6 C7 C5
+H7 C7 C2 C6
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 H11 H12 C2 C3 H3 C4 H4 C5 H5 C6 H6 C7 H7
+*-----------------------------------------------------------------------
+{S53}               ! Substituent for ligand 53    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.6300	    ! 902 
+   2  	C1	CT	 0.2050	    ! 0.09 (911) + 0.115 (148, toluene) = 0.205 
+   3  	H101    HN	 0.0600     ! 911
+   4  	H102    HN	 0.0600	    ! 911
+   5 	C2	CA	-0.1150	     
+   6 	C3	CA	-0.1150      
+   7  	H3	HA	 0.1150	     
+   8  	C4      CA	-0.1150      
+   9   	H4	HA	 0.1150	     
+   10  	C5      CA	-0.1150      
+   11  	H5	HA	 0.1150	     
+   12  	C6      CA	-0.1150      
+   13  	H6	HA	 0.1150	     
+   14  	C7      CA	-0.1150      
+   15  	H7	HA	 0.1150	     
+   16 	C8	CT	 0.2050	    ! 0.09 (911) + 0.115 (148, toluene) = 0.205
+   17 	H801    HN	 0.0600     ! 911
+   18 	H802    HN	 0.0600	    ! 911
+   19 	C9	CA	-0.1150	     
+   20	C10	CA	-0.1150      
+   21	H10	HA	 0.1150	     
+   22	C11     CA	-0.1150      
+   23 	H11	HA	 0.1150	     
+   24 	C12     CA	-0.1150      
+   25 	H12	HA	 0.1150	     
+   26 	C13     CA	-0.1150      
+   27  	H13	HA	 0.1150	     
+   28  	C14     CA	-0.1150      
+   29  	H14	HA	 0.1150	     
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H101
+C1 H102
+C1 C2
+C2 C3
+C3 H3
+C3 C4
+C4 H4
+C4 C5
+C5 H5
+C5 C6
+C6 H6
+C6 C7
+C7 H7
+C2 C7
+N12 C8
+C8 H801
+C8 H802
+C8 C9
+C9 C10
+C10 H10
+C10 C11
+C11 H11
+C11 C12
+C12 H12
+C12 C13
+C13 H13
+C13 C14
+C14 H14
+C9 C14
+  
+[connections]
+head N12
+
+[impropers]
+C1 C2 C3 C7		 ! First ring 
+H3 C3 C4 C2
+H4 C4 C5 C3
+H5 C5 C6 C4
+H6 C6 C7 C5
+H7 C7 C2 C6
+C8 C9 C10 C14		 ! Second ring 
+H10 C10 C11 C9
+H11 C11 C12 C10
+H12 C12 C13 C11
+H13 C13 C14 C12
+H14 C14 C9 C13
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H101 H102 C2 C3 H3 C4 H4 C5 H5 C6 H6 C7 H7 C8 H801 H802 C9 C10 H10 C11 H11 C12 H12 C13 H13 C14 H14
+*-----------------------------------------------------------------------
+{S54}               ! Substituent for ligand 54    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! Tertiary amine  902	 
+   2	C1	CT	 0.090		! 908
+   3	H11	HN	 0.060	    	! 911
+   4	H12	HN	 0.060	    	! 911
+   5	C2	CT	 0.140		! 182 C(H2OR): ethyl  ether	
+   6	H21     HC	 0.030        	! 185 alpha H ether
+   7  	H22     HC	 0.030        	! 185 "	 	
+   8	O3	OS	-0.400    	! 180 dialkyl ether 	     
+   9 	C4	CT	 0.140		! 182 C(H2OR): ethyl  ether		
+   10  	H41     HC	 0.030        	! 185 alpha H ether
+   11  	H42     HC	 0.030        	! 185 "	 	
+   12	C5	CT	 0.090		! 908
+   13	H51     HN	 0.060	    	! 911
+   14  	H52     HN	 0.060	    	! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+N12 C5
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 O3
+O3 C4
+C4 H41
+C4 H42
+C4 C5
+C5 H51
+C5 H52
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 O3 C4 H41 H42 C5 H51 H52
+*-----------------------------------------------------------------------
+{S55}               ! Substituent for ligand 55    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! Tertiary amine  902	 
+   2	C1	CT	 0.090		! 908
+   3	H11	HN	 0.060	    	! 911
+   4	H12	HN	 0.060	    	! 911
+   5	C2	CT	-0.120
+   6	H21     HC	 0.060     
+   7  	H22     HC	 0.060	    
+   8	C3	CT	-0.120
+   9	H31     HC	 0.060       
+   10  	H32     HC	 0.060	 	     
+   11 	C4	CT	-0.120		
+   12  	H41     HC	 0.060        	
+   13  	H42     HC	 0.060	 	
+   14	C5	CT	 0.090		! 908
+   15	H51     HN	 0.060	    	! 911
+   16  	H52     HN	 0.060	    	! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+[bonds]
+N12 C1
+N12 C5
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 C4
+C4 H41
+C4 H42
+C4 C5
+C5 H51
+C5 H52
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 C3 H31 H32 C4 H41 H42 C5 H51 H52
+*-----------------------------------------------------------------------
+{S56}               ! Substituent for ligand 56    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! 902	 	  
+   2	C1	CM	 0.095		! -0.115+0.21=0.095, analogy with 905		  
+   3	H11	HM	 0.115	    	 			  
+   4	C2	C=	-0.115		 			  
+   5	H21     HM	 0.115     	 			  
+   6	C3	C=	-0.115		 			  
+   7	H31	HM	 0.115     	 
+   8	C4	CM	 0.095		 
+   9	H41     HM	 0.115     	! -0.115+0.21=0.095, analogy with 905	                                                                                                                                                                                                        
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 C2
+C2 H21
+C2 C3
+C3 H31
+C3 C4
+C4 H41
+N12 C4
+
+[connections]
+head N12
+tail N12
+
+[impropers]
+H11 C1 C2 N12
+H21 C2 C3 C1
+H31 C3 C4 C2
+H41 C4 N12 C3 
+-C12 N12 C1 C4
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 C2 H21 C3 H31 C4 H41 
+*-----------------------------------------------------------------------
+{S59}               ! Substituent for ligand 59    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! 902	 
+   2	C1	CT	 0.090		! 908
+   3	H11	HN	 0.060	    	! 911
+   4	H12	HN	 0.060	    	! 911       
+   5	C2	CT	 0.145		! 157	
+   6	H21     HC	 0.060     
+   7 	H22     HC	 0.060
+   8	O3	OH   	-0.683		! 154
+   9	H3	HO    	 0.418		! 155
+   10 	C4	CT	 0.030 		! 905         
+   11  	H41     HN	 0.060      	! 911
+   12  	H42     HN	 0.060	   	! 911
+   13 	H43	HN	 0.060	        ! 911
+      
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 O3
+O3 H3
+N12 C4
+C4 H41
+C4 H42
+C4 H43
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 O3 H3 C4 H41 H42 H43
+*-----------------------------------------------------------------------
+{S60}               ! Substituent for ligand 60    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! 902	 
+   2	C1	CT	 0.090		! 908
+   3	H11	HN	 0.060	    	! 911
+   4	H12	HN	 0.060	    	! 911       
+   5	C2	CT	-0.120
+   6	H21     HC	 0.060
+   7 	H22     HC	 0.060
+   8	C3	CT	 0.145		! 157	
+   9	H31	HC	 0.060     
+   10 	H32	HC	 0.060
+   11 	O4	OH   	-0.683		! 154
+   12 	H4	HO    	 0.418		! 155
+   13 	C5	CT	 0.030 		! 905         
+   14 	H51     HN	 0.060      	! 911
+   15 	H52     HN	 0.060	   	! 911
+   16	H53	HN	 0.060	        ! 911
+      
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 O4
+O4 H4
+N12 C5
+C5 H51
+C5 H52
+C5 H53
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 C3 H31 H32 O4 H4 C5 H51 H52 H53
+*-----------------------------------------------------------------------
+{S61}               ! Substituent for ligand 61    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! 902	 
+   2	C1	CT	 0.090		! 908
+   3	H11	HN	 0.060	    	! 911
+   4	H12	HN	 0.060	    	! 911
+   5	C2	CT	-0.120
+   6	H21     HC	 0.060     
+   7  	H22     HC	 0.060	    
+   8	C3	CT	-0.120
+   9	H31     HC	 0.060     
+   10  	H32     HC	 0.060
+   11	C4	CT	-0.120
+   12	H41     HC	 0.060     
+   13  	H42     HC	 0.060
+   14	C5	CT	 0.145		! 157	
+   15	H51     HC	 0.060     
+   16  	H52     HC	 0.060
+   17	O6	OH   	-0.683		! 154
+   18	H6	HO    	 0.418		! 155
+   19 	C7	CT	 0.030 		! 905         
+   20  	H71     HN	 0.060      	! 911
+   21  	H72     HN	 0.060	   	! 911
+   22 	H73	HN	 0.060	        ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 C4
+C4 H41
+C4 H42
+C4 C5
+C5 H51
+C5 H52
+C5 O6
+O6 H6
+N12 C7
+C7 H71
+C7 H72
+C7 H73
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 C3 H31 H32 C4 H41 H42 C5 H51 H52 O6 H6 C7 H71 H72 H73
+*-----------------------------------------------------------------------
+{S62}               ! Substituent for ligand 62    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.6300	  	! 902	 
+   2	C1	CT	 0.0900		! 908
+   3	H11	HN	 0.0600	    	! 911
+   4	H12	HN	 0.0600		! 911
+   5	C2	CT	 0.1400		! 182
+   6 	H21     HC	 0.0300     	! 185
+   7 	H22     HC	 0.0300     	! 185
+   8 	O3	OS	-0.4000		! 180
+   9 	C4	CT	 0.1100		! 181         
+   10	H41     HC	 0.0300     	! 185
+   11	H42     HC	 0.0300     	! 185
+   12	H43	HC	 0.0300     	! 185
+   13 	C5	CT	 0.0300		! 905         
+   14  	H51     HN	 0.0600      	! 911
+   15  	H52     HN	 0.0600	   	! 911
+   16 	H53	HN	 0.0600	        ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 O3
+O3 C4
+C4 H41
+C4 H42
+C4 H43
+N12 C5
+C5 H51
+C5 H52
+C5 H53
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 O3 C4 H41 H42 H43 C5 H51 H52 H53
+*-----------------------------------------------------------------------
+{S63}               ! Substituent for ligand 63    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! 902	 
+   2	C1	CT	 0.090		! 908
+   3	H11	HN	 0.060	    	! 911
+   4	H12	HN	 0.060		! 911
+   5	C2	CT	 0.140		! 182
+   6 	H21     HC	 0.030     	! 185
+   7 	H22     HC	 0.030     	! 185
+   8 	O3	OS	-0.400		! 180
+   9 	C4	CT	 0.140 		! 182         
+   10	H41     HC	 0.030     	! 185
+   11	H42     HC	 0.030     	! 185
+   12	C5	CT	-0.180 
+   13	H51     HC	 0.060
+   14	H52     HC	 0.060
+   15	H53	HC	 0.060
+   16 	C6	CT	 0.030 		! 905         
+   17  	H61     HN	 0.060      	! 911
+   18  	H62     HN	 0.060	   	! 911
+   19 	H63	HN	 0.060	        ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 O3
+O3 C4
+C4 H41
+C4 H42
+C4 C5
+C5 H51
+C5 H52
+C5 H53
+N12 C6
+C6 H61
+C6 H62
+C6 H63
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 O3 C4 H41 H42 C5 H51 H52 H53 C6 H61 H62 H63
+*-----------------------------------------------------------------------
+{S64}               ! Substituent for ligand 64    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.630 	  	! 902	 
+   2	C1	CTN	 0.190		! 908+756			
+   3	H11	HN	 0.060		! 759				
+   4	H12	HN	 0.060		! 759				
+   5	C2	CN1	 0.460		! 754
+   6	N3	NN	-0.560		! 753	
+   7 	C4	CT	 0.030 		! 905         
+   8  	H41     HN	 0.060      	! 911
+   9  	H42     HN	 0.060	   	! 911
+   10 	H43	HN	 0.060	        ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 N3
+N12 C4
+C4 H41
+C4 H42
+C4 H43
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 N3 C4 H41 H42 H43
+*-----------------------------------------------------------------------
+{S65}               ! Substituent for ligand 65    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.6300   	! 902	 
+   2	C1	CT	 0.0900		! 908
+   3	H11	HN	 0.0600	    	! 911
+   4	H12	HN	 0.0600		! 911
+   5	C2	CTN	-0.0200		! 756
+   6	H21	HN	 0.0600		! 759
+   7 	H22	HN	 0.0600		! 759
+   8 	C3	CN1	 0.4600		! 754
+   9 	N4	NN	-0.5600		! 753
+   10	C5	CT	 0.0300 	! 905         
+   11 	H51     HN	 0.0600      	! 911
+   12 	H52     HN	 0.0600	   	! 911
+   13 	H53	HN	 0.0600	        ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 N4
+N12 C5
+C5 H51
+C5 H52
+C5 H53
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 C3 N4 C5 H51 H52 H53
+*-----------------------------------------------------------------------
+{S66}               ! Substituent for ligand 66    
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NT	-0.6300 	! 902	 
+   2	C1	CT	 0.0900		! 908
+   3	H11	HN	 0.0600	    	! 911
+   4	H12	HN	 0.0600         ! 911
+   5	C2	CT	-0.1200
+   6	H21	HC	 0.0600
+   7 	H22	HC	 0.0600
+   8 	C3	CTN	-0.0200		! 756
+   9 	H31	HN	 0.0600		! 759
+   10	H32	HN	 0.0600		! 759
+   11	C4	CN1	 0.4600		! 754
+   12	N5	NN	-0.5600		! 753
+   13	C6	CT	 0.0300 	! 905         
+   14 	H61     HN	 0.0600      	! 911
+   15 	H62     HN	 0.0600	   	! 911
+   16	H63	HN	 0.0600	        ! 911
+   
+   ! Sum of charges is -0.21 to compensate for 0.21 on CA
+   
+[bonds]
+N12 C1
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 C4
+C4 N5
+N12 C6
+C6 H61
+C6 H62
+C6 H63
+
+[connections]
+head N12
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 C1 H11 H12 C2 H21 H22 C3 H31 H32 C4 N5 C6 H61 H62 H63
+*-----------------------------------------------------------------------
+{S67}               ! Substituent for ligand 67   Thiourea 
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NAM	-0.2466	    	! CONSTRAINED RESP
+   2 	H1	H	 0.2563     	! CONSTRAINED RESP
+   3  	C1	C	 0.2093	    	! CONSTRAINED RESP
+   4  	S2     	S= 	-0.3976		! CONSTRAINED RESP  
+   5  	N3   	NAM 	-0.4025		! CONSTRAINED RESP
+   6  	H31	H	 0.3111		! CONSTRAINED RESP
+   7	C4	CT	 0.1006		! CONSTRAINED RESP
+   8	H41	HC	 0.0422		! CONSTRAINED RESP
+   9	H42	HC	 0.0422		! CONSTRAINED RESP
+   10	C5	CT	-0.1800		
+   11	H51	HC	 0.0600		
+   12	H52	HC	 0.0600		
+   13	H53	HC	 0.0600		
+                                                                          
+   ! Sum of charges is -0.085 to compensate for 0.085 on CA
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 S2
+C1 N3
+N3 H31
+N3 C4
+C4 H41
+C4 H42
+C4 C5
+C5 H51
+C5 H52
+C5 H53
+
+[connections]
+head N12
+
+[impropers]
+H1 N12 C1 -C12
+S2 C1 N12 N3
+H31 N3 C4 C1
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 S2 N3 H31 C4 H41 H42 C5 H51 H52 H53
+*-----------------------------------------------------------------------
+{S68}               ! Substituent for ligand 68   Thiourea 
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NAM	-0.2510        ! CONSTRAINED RESP
+   2 	H1	H	 0.2610        ! CONSTRAINED RESP
+   3  	C1	C	 0.1909        ! CONSTRAINED RESP
+   4  	S2     	S= 	-0.3808	       ! CONSTRAINED RESP
+   5  	N3   	NAM 	-0.2511	       ! CONSTRAINED RESP
+   6  	H31	H	 0.2610	       ! CONSTRAINED RESP
+   7	C4	CAM	 0.0850	      
+   8	C5	CA	-0.1150        
+   9	H5	HA	 0.1150        
+   10	C6	CA	-0.1150 
+   11	H6	HA	 0.1150 
+   12	C7	CA	-0.1150 
+   13	H7	HA	 0.1150 
+   14	C8	CA	-0.1150 
+   15	H8	HA	 0.1150 
+   16	C9	CA	-0.1150 
+   17	H9	HA	 0.1150 
+                             
+   ! Sum of charges is -0.085 to compensate for 0.085 on CA
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 S2
+C1 N3
+N3 H31
+N3 C4
+C4 C5
+C5 H5
+C5 C6
+C6 H6
+C6 C7
+C7 H7
+C7 C8
+C8 H8
+C8 C9
+C9 H9
+C9 C4
+
+[connections]
+head N12
+
+[impropers]
+H1 N12 C1 -C12
+S2 C1 N12 N3
+H31 N3 C4 C1
+N3 C4 C5 C9
+H5 C5 C6 C4
+H6 C6 C7 C5
+H7 C7 C8 C6
+H8 C8 C9 C7
+H9 C9 C4 C8
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 S2 N3 H31 C4 C5 H5 C6 H6 C7 H7 C8 H8 C9 H9
+*-----------------------------------------------------------------------
+{S70}               ! Substituent for ligand 70   Thiourea 
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	N12	NAM	-0.2058	    	! CONSTRAINED RESP
+   2 	H1	H	 0.2594     	! CONSTRAINED RESP
+   3  	C1	C	 0.3140	    	! CONSTRAINED RESP 
+   4  	S2     	S= 	-0.4507         ! CONSTRAINED RESP 
+   5  	N3   	NAM 	-0.7483		! CONSTRAINED RESP
+   6  	H31	H	 0.3732		! CONSTRAINED RESP
+   7	H32	H	 0.3732		! CONSTRAINED RESP
+                                                                          				
+   ! Sum of charges is -0.085 to compensate for 0.085 on CA
+   
+
+[bonds]
+N12 H1
+N12 C1
+C1 S2
+C1 N3
+N3 H31
+N3 H32
+  
+[connections]
+head N12
+
+[impropers]
+H1 N12 C1 -C12
+S2 C1 N12 N3
+H31 N3 H32 C1
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+N12 H1 C1 S2 N3 H31 H32
+*-----------------------------------------------------------------------
+* General residues
+* 18X: 9, 18b-f
+* 18Y: 18g
+* 18Z: 18h
+* 18I: 18i 
+*-----------------------------------------------------------------------
+{18X}               ! Scaffold for 9 + 18b-f (new)
+    [info]
+                                       !SYBYLtype  GROUP
+		PDBtype    HETATM
+  [atoms]
+   1 	C1	CA	-0.1150	    ! Aromatic ring  	
+   2 	C2	CA	-0.1150     ! Aromatic ring     
+   3  	H2	HA	 0.1150	    ! Aromatic ring 
+   4  	C3      CA	-0.1150     ! Aromatic ring 
+   5  	C31     CT	-0.0650	    ! Toluene
+   6  	H31	HC	 0.0600	    ! Toluene
+   7  	H32	HC	 0.0600	    ! Toluene
+   8  	H33	HC	 0.0600	    ! Toluene
+   9  	C4      CA	-0.1150     ! Aromatic ring
+  10  	H4	HA	 0.1150	    ! Aromatic ring
+  11  	C5      CA	-0.1150     ! Aromatic ring
+  12  	C51     CT	-0.0650     ! Toluene
+  13  	H51     HC	 0.0600	    ! Toluene
+  14  	H52	HC	 0.0600	    ! Toluene
+  15  	H53	HC	 0.0600	    ! Toluene
+  16  	C6      CA	-0.1150     ! Aromatic ring
+  17  	H6	HA	 0.1150	    ! Aromatic ring
+  18  	CL      CT	 0.1100	    ! Guess (analogy with ethylbenzene) -0.115*2+0.06*2+X=0
+  19  	HL1	HC   	 0.0600	    ! Alkane
+  20  	HL2	HC	 0.0600	    ! Alkane
+  21  	C7      CA	-0.1150     ! Aromatic ring
+  22  	C8      CA	-0.1150     ! Aromatic ring
+  23 	C9  	CA 	 0.0850	    ! Alkene; -0.115+0.2 = 0.0850, agrees with Cytosine & 266
+  24 	N10 	N       -0.5000	    ! Secondary amide 238
+  25 	H10	H 	 0.3000	    ! Secondary amide 241
+  26 	C11	C        0.5000	    ! Amide 235
+  27 	O11	O	-0.5000	    ! Amide
+  28 	C12	CA	 0.2100	    ! C(NR2) N,N-dimethylaniline 918
+  29	N12	NT	-0.6300	    ! Tertiary amine  902
+  30	C13	CT	 0.0300	    ! 905 
+  31	H131	HN	 0.0600     ! 911
+  32	H132	HN	 0.0600	    ! 911
+  33	H133	HN	 0.0600	    ! 911
+  34	C14	CT	 0.0300	    ! 905 
+  35	H141	HN	 0.0600     ! 911
+  36	H142	HN	 0.0600	    ! 911
+  37	H143	HN	 0.0600	    ! 911
+
+
+[bonds] 
+  C1 C2	    ! First ring ("o-Xylene like")
+  C2 C3	
+  C2 H2
+  C3 C31
+  C31 H31
+  C31 H32
+  C31 H33
+  C3 C4
+  C4 H4
+  C4 C5	  
+  C5 C51
+  C51 H51
+  C51 H52
+  C51 H53
+  C5 C6
+  C6 H6
+  C6 C1	  
+  C1 CL	     ! Second ring 
+  CL HL1
+  CL HL2
+  CL C7
+  C7 C8
+  C8 C9
+  C9 N10
+  N10 H10
+  N10 C11
+  C11 O11
+  C11 C12
+  C12 C7
+  C12 N12
+  N12 C13
+  C13 H131
+  C13 H132
+  C13 H133
+  N12 C14
+  C14 H141
+  C14 H142
+  C14 H143
+  
+[connections]
+head C8
+tail C9
+ 
+[impropers]
+  CL C1 C2 C6		 ! First ring ("o-Xylene like")
+  H2 C2 C3 C1
+  C31 C3 C4 C2
+  H4 C4 C5 C3
+  C51 C5 C6 C4
+  H6 C6 C1 C5
+  CL C7 C8 C12		 ! Second ring 
+ -C1 C8 C9 C7
+ +C1 C9 N10 C8
+  H10 N10 C11 C9
+  O11 C11 C12 N10
+  N12 C12 C7 C11      	 
+  
+ [charge_groups]	 ! Charge groups shouldnt matter
+   C1 CL HL1 HL2 C7 	 ! For Q atoms since all interactions are calculated with them.
+   C2 H2
+   C3 C31 H31 H32 H33
+   C4 H4
+   C5 C51 H51 H52 H53
+   C6 H6
+   C8  	   		!  Therefore I can have a lone charge here.
+   C9 N10 H10 		!  Therefore I can have a lone charge here.
+   C11 O11
+   C12 N12 C13 H131 H132 H133 C14 H141 H142 H143           
+
+*-----------------------------------------------------------------------
+{18Y}               ! Scaffold för 18g
+    [info]
+                                       !SYBYLtype  GROUP
+		PDBtype    HETATM
+  [atoms]
+   1 	C1	CA	-0.1150	    ! Aromatic ring  						    
+   2 	C2	CA	-0.1150     ! Aromatic ring     					    
+   3  	H2	HA	 0.1150	    ! Aromatic ring 						    
+   4  	C3      CA	-0.1150     ! Aromatic ring 						    
+   5  	C31     CT	-0.0650	    ! Toluene							    
+   6  	H31	HC	 0.0600	    ! Toluene							    
+   7  	H32	HC	 0.0600	    ! Toluene							    
+   8  	H33	HC	 0.0600	    ! Toluene							    
+   9  	C4      CA	-0.1150     ! Aromatic ring						    
+  10  	H4	HA	 0.1150	    ! Aromatic ring						    
+  11  	C5      CA	-0.1150     ! Aromatic ring						    
+  12  	C51     CT	-0.0650     ! Toluene							    
+  13  	H51     HC	 0.0600	    ! Toluene							    
+  14  	H52	HC	 0.0600	    ! Toluene							    
+  15  	H53	HC	 0.0600	    ! Toluene							    
+  16  	C6      CA	-0.1150     ! Aromatic ring						    
+  17  	H6	HA	 0.1150	    ! Aromatic ring						    
+  18  	CL      CT	 0.1100	    ! Guess (analogy with ethylbenzene)				    
+  19  	HL1	HC   	 0.0600	    ! Alkane							    
+  20  	HL2	HC	 0.0600	    ! Alkane							    
+  21  	C7      CA	-0.1150     ! Aromatic ring						    
+  22  	C8      CA	-0.1150     ! Aromatic ring						    
+  23	H8	HA	 0.1150	    ! 144 alkene H (H-C=)  all atom				    
+  24 	C9  	CA 	 0.0850	    ! Alkene; -0.115+0.2 = 0.0850, agrees with Cytosine & 266	    
+  25	H9	HA	 0.1150	    ! 144 alkene H (H-C=)  all atom				    
+  26 	N10 	N       -0.5000	    ! Secondary amide 238					    
+  27 	H10	H 	 0.3000	    ! Secondary amide 241					    
+  28 	C11	C        0.5000	    ! Amide 235							    
+  29 	O11	O	-0.5000	    ! Amide							    
+  30 	C12	CA	 0.2100	    ! C(NR2) N,N-dimethylaniline 918				    
+  31	N12	NT	-0.6300     ! Tertiary amine  902					    
+  32	C13	CT	 0.0300     ! 905 							    
+  33	H131	HN	 0.0600     ! 911							    
+  34	H132	HN	 0.0600	    ! 911							    
+  35	H133	HN	 0.0600	    ! 911							    
+  36	C14	CT	 0.030 	    ! 905 							    
+  37	H141	HN	 0.0600     ! 911							    
+  38	H142	HN	 0.0600	    ! 911
+  39	H143	HN	 0.0600	    ! 911
+ 	
+ 	
+[bonds] 
+  C1 C2	    ! First ring ("o-Xylene like")
+  C2 C3	
+  C2 H2
+  C3 C31
+  C31 H31
+  C31 H32
+  C31 H33
+  C3 C4
+  C4 H4
+  C4 C5	  
+  C5 C51
+  C51 H51
+  C51 H52
+  C51 H53
+  C5 C6
+  C6 H6
+  C6 C1	  
+  C1 CL	     ! Second ring 
+  CL HL1
+  CL HL2
+  CL C7
+  C7 C8
+  C8 H8
+  C8 C9
+  C9 H9
+  C9 N10
+  N10 H10
+  N10 C11
+  C11 O11
+  C11 C12
+  C12 C7
+  C12 N12
+  N12 C13
+  C13 H131
+  C13 H132
+  C13 H133
+  N12 C14
+  C14 H141
+  C14 H142
+  C14 H143
+  
+   
+[impropers]
+  CL C1 C2 C6		 ! First ring ("o-Xylene like")
+  H2 C2 C3 C1
+  C31 C3 C4 C2
+  H4 C4 C5 C3
+  C51 C5 C6 C4
+  H6 C6 C1 C5
+  CL C7 C8 C12		 ! Second ring 
+  H8 C8 C9 C7
+  H9 C9 N10 C8
+  H10 N10 C11 C9
+  O11 C11 C12 N10
+  N12 C12 C7 C11      	 	
+  
+ [charge_groups]	 ! Charge groups shouldnt matter
+   C1 CL HL1 HL2 C7 	 ! For Q atoms since all interactions are calculated with them.
+   C2 H2
+   C3 C31 H31 H32 H33
+   C4 H4
+   C5 C51 H51 H52 H53
+   C6 H6
+   C8 H8 	   		
+   C9 H9 N10 H10 		
+   C11 O11
+   C12 N12 C13 H131 H132 H133 C14 H141 H142 H143           
+
+*-----------------------------------------------------------------------
+{18Z}               ! Scaffold for 18h
+    [info]
+                                       !SYBYLtype  GROUP
+		PDBtype    HETATM
+  [atoms]
+   1 	C1	CA	-0.1150	    ! Aromatic ring  	
+   2 	C2	CA	-0.1150     ! Aromatic ring     
+   3  	H2	HA	 0.1150	    ! Aromatic ring 
+   4  	C3      CA	-0.1150     ! Aromatic ring 
+   5  	C31     CT	-0.0650	    ! Toluene
+   6  	H31	HC	 0.0600	    ! Toluene
+   7  	H32	HC	 0.0600	    ! Toluene
+   8  	H33	HC	 0.0600	    ! Toluene
+   9  	C4      CA	-0.1150     ! Aromatic ring
+  10  	H4	HA	 0.1150	    ! Aromatic ring
+  11  	C5      CA	-0.1150     ! Aromatic ring
+  12  	C51     CT	-0.0650     ! Toluene
+  13  	H51     HC	 0.0600	    ! Toluene
+  14  	H52	HC	 0.0600	    ! Toluene
+  15  	H53	HC	 0.0600	    ! Toluene
+  16  	C6      CA	-0.1150     ! Aromatic ring
+  17  	H6	HA	 0.1150	    ! Aromatic ring
+  18  	CL      CT	 0.1100	    ! Guess (analogy with ethylbenzene)
+  19  	HL1	HC   	 0.0600	    ! Alkane
+  20  	HL2	HC	 0.0600	    ! Alkane
+  21  	C7      CA	-0.1150     ! Aromatic ring
+  22  	C8      CA	-0.1150     ! Aromatic ring
+  23	H8	HA	 0.1150	    ! Aromatic ring
+  24 	C9  	CA 	 0.0850	    ! Alkene; -0.115+0.2 = 0.0850, agrees with Cytosine & 266	
+  25	N10 	N       -0.5000	    ! Secondary amide 238
+  26 	H10	H 	 0.3000	    ! Secondary amide 241
+  27 	C11	C        0.5000	    ! Amide 235
+  28 	O11	O	-0.5000	    ! Amide
+  29 	C12	CA	 0.2100	    ! C(NR2) N,N-dimethylaniline 918
+  30 	N12	NT	-0.6300	    ! Tertiary amine  902
+  31	C13	CT	 0.0300	    ! 905 
+  32	H131	HN	 0.0600     ! 911
+  33	H132	HN	 0.0600	    ! 911
+  34	H133	HN	 0.0600	    ! 911
+  35	C14	CT	 0.0300	    ! 905 
+  36	H141	HN	 0.0600     ! 911
+  37	H142	HN	 0.0600	    ! 911
+  38	H143	HN	 0.0600	    ! 911
+	
+ 	 	
+[bonds] 
+  C1 C2	    ! First ring ("o-Xylene like")
+  C2 C3	
+  C2 H2
+  C3 C31
+  C31 H31
+  C31 H32
+  C31 H33
+  C3 C4
+  C4 H4
+  C4 C5	  
+  C5 C51
+  C51 H51
+  C51 H52
+  C51 H53
+  C5 C6
+  C6 H6
+  C6 C1	  
+  C1 CL	     ! Second ring 
+  CL HL1
+  CL HL2
+  CL C7
+  C7 C8
+  C8 H8
+  C8 C9
+  C9 N10
+  N10 H10
+  N10 C11
+  C11 O11
+  C11 C12
+  C12 C7
+  C12 N12
+  N12 C13
+  C13 H131
+  C13 H132
+  C13 H133
+  N12 C14
+  C14 H141
+  C14 H142
+  C14 H143
+  
+[connections]
+  tail C9
+   
+[impropers]
+  CL C1 C2 C6		 ! First ring ("o-Xylene like")
+  H2 C2 C3 C1
+  C31 C3 C4 C2
+  H4 C4 C5 C3
+  C51 C5 C6 C4
+  H6 C6 C1 C5
+  CL C7 C8 C12		 ! Second ring 
+  H8 C8 C9 C7
+ +C1 C9 N10 C8
+  H10 N10 C11 C9
+  O11 C11 C12 N10
+  N12 C12 C7 C11      	 	
+  
+ [charge_groups]	 ! Charge groups shouldnt matter
+   C1 CL HL1 HL2 C7 	 ! For Q atoms since all interactions are calculated with them.
+   C2 H2
+   C3 C31 H31 H32 H33
+   C4 H4
+   C5 C51 H51 H52 H53
+   C6 H6
+   C8 H8 	   		
+   C9 N10 H10 		
+   C11 O11
+   C12 N12 C13 H131 H132 H133 C14 H141 H142 H143           
+
+*-----------------------------------------------------------------------
+{18I}               ! Scaffold för 18i
+    [info]
+                                       !SYBYLtype  GROUP
+		PDBtype    HETATM
+  [atoms]
+   1 	C1	CA	-0.1150	    ! Aromatic ring  	
+   2 	C2	CA	-0.1150     ! Aromatic ring     
+   3  	H2	HA	 0.1150	    ! Aromatic ring 
+   4  	C3      CA	-0.1150     ! Aromatic ring 
+   5  	C31     CT	-0.0650	    ! Toluene
+   6  	H31	HC	 0.0600	    ! Toluene
+   7  	H32	HC	 0.0600	    ! Toluene
+   8  	H33	HC	 0.0600	    ! Toluene
+   9  	C4      CA	-0.1150     ! Aromatic ring
+  10  	H4	HA	 0.1150	    ! Aromatic ring
+  11  	C5      CA	-0.1150     ! Aromatic ring
+  12  	C51     CT	-0.0650     ! Toluene
+  13  	H51     HC	 0.0600	    ! Toluene
+  14  	H52	HC	 0.0600	    ! Toluene
+  15  	H53	HC	 0.0600	    ! Toluene
+  16  	C6      CA	-0.1150     ! Aromatic ring
+  17  	H6	HA	 0.1150	    ! Aromatic ring
+  18  	CL      CT	 0.1100	    ! Guess (analogy with ethylbenzene) -0.115*2+0.06*2+X=0
+  19  	HL1	HC   	 0.0600	    ! Alkane
+  20  	HL2	HC	 0.0600	    ! Alkane
+  21  	C7      CA	-0.1150     ! Aromatic ring
+  22  	C8      CA	-0.1150     ! Aromatic ring
+  23	C81	CT	-0.0050	    ! Ethylbenzene, 149
+  24	H811	HC	 0.0600	
+  25	H812	HC	 0.0600	
+  26	C82	CT	-0.1200	
+  27	H821	HC	 0.0600	
+  28	H822	HC	 0.0600	
+  29 	C9  	CA 	 0.0850	    ! Alkene; -0.115+0.2 = 0.0850, agrees with Cytosine & 266	
+  30	C91	CT	-0.0050	    ! 149 all-atom C: CH2, ethyl benzene
+  31	H911	HC	 0.0600	
+  32	H912	HC	 0.0600	
+  33	C92	CT	-0.1200	    
+  34	H921	HC	 0.0600	  
+  35	H922	HC	 0.0600	  
+  36 	N10 	N       -0.5000	    ! Secondary amide 238
+  37 	H10	H 	 0.3000	    ! Secondary amide 241
+  38 	C11	C        0.5000	    ! Amide 235
+  39 	O11	O	-0.5000	    ! Amide
+  40 	C12	CA	 0.21	    ! C(NR2) N,N-dimethylaniline 918
+  41	N12	NT	-0.63 	    ! Tertiary amine  902
+  42	C13	CT	 0.030 	    ! 905 
+  43	H131	HN	 0.0600     ! 911
+  44	H132	HN	 0.0600	    ! 911
+  45	H133	HN	 0.0600	    ! 911
+  46	C14	CT	 0.030 	    ! 905 
+  47	H141	HN	 0.0600     ! 911
+  48	H142	HN	 0.0600	    ! 911
+  49	H143	HN	 0.0600	    ! 911
+ 	
+ 	
+[bonds] 
+  C1 C2	    ! First ring ("o-Xylene like")
+  C2 C3	
+  C2 H2
+  C3 C31
+  C31 H31
+  C31 H32
+  C31 H33
+  C3 C4
+  C4 H4
+  C4 C5	  
+  C5 C51
+  C51 H51
+  C51 H52
+  C51 H53
+  C5 C6
+  C6 H6
+  C6 C1	  
+  C1 CL	     ! Second ring 
+  CL HL1
+  CL HL2
+  CL C7
+  C7 C8
+  C8 C9
+  C8 C81
+  C81 H811
+  C81 H812
+  C81 C82
+  C82 H821
+  C82 H822
+  C82 C92
+  C92 H921
+  C92 H922
+  C92 C91
+  C91 H911
+  C91 H912
+  C91 C9
+  C9 N10
+  N10 H10
+  N10 C11
+  C11 O11
+  C11 C12
+  C12 C7
+  C12 N12
+  N12 C13
+  C13 H131
+  C13 H132
+  C13 H133
+  N12 C14
+  C14 H141
+  C14 H142
+  C14 H143
+
+ 
+[impropers]
+  CL C1 C2 C6		 ! First ring ("o-Xylene like")
+  H2 C2 C3 C1
+  C31 C3 C4 C2
+  H4 C4 C5 C3
+  C51 C5 C6 C4
+  H6 C6 C1 C5
+  CL C7 C8 C12		 ! Second ring 
+  C81 C8 C9 C7
+  C91 C9 N10 C8
+  H10 N10 C11 C9
+  O11 C11 C12 N10
+  N12 C12 C7 C11      	 ! Amin is in next residue. must be called N12	
+  
+ [charge_groups]	 ! Charge groups shouldnt matter
+   C1 CL HL1 HL2 C7 	 ! For Q atoms since all interactions are calculated with them.
+   C2 H2
+   C3 C31 H31 H32 H33
+   C4 H4
+   C5 C51 H51 H52 H53
+   C6 H6
+   C8 C81 H811 H812
+   C82 H821 H822
+   C9 C91 H911 H912 N10 H10
+   C92 H921 H922
+   C11 O11
+   C12 N12 C13 H131 H132 H133 C14 H141 H142 H143           
+
+*-----------------------------------------------------------------------
+{A9}               ! A (R2) Substituent for ligand 9
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	C1 	CT	-0.0050	 ! Ethylbenzene, 149  
+   2 	H11	HC	 0.0600	    
+   3 	H12	HC	 0.0600	    
+   4 	C2 	CT	-0.1800	    
+   5	H21	HC	 0.0600	  
+   6	H22	HC	 0.0600	  
+   7	H23	HC	 0.0600	  
+   
+
+[bonds]
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 H23
+
+[connections]
+tail C1
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+C1 H11 H12 C2 H21 H22 H23
+*-----------------------------------------------------------------------
+{A1B}               ! A (R2) Substituent for ligand 18b
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	C1 	CT	-0.0650 ! Toluene, 148    
+   2 	H11	HC	 0.0600	    
+   3 	H12	HC	 0.0600	    
+   4 	H13	HC	 0.0600	    
+   
+
+[bonds]
+C1 H11
+C1 H12
+C1 H13
+
+[connections]
+tail C1
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+C1 H11 H12 H13
+*-----------------------------------------------------------------------
+{A1D}               ! A (R2) Substituent for ligand 18f (new)
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	C1 	CT	-0.0050 ! ethylbenzene, 149	    
+   2 	H11	HC	 0.0600	    
+   3 	H12	HC	 0.0600
+   4	C2 	CT	-0.0600
+   5	H21	HC	 0.0600
+   6	C3 	CT	-0.1800	    
+   7 	H31	HC	 0.0600	  
+   8	H32	HC	 0.0600	  
+   9	H33	HC	 0.0600	
+   10 	C4 	CT	-0.1800	    
+   11	H41	HC	 0.0600	  
+   12	H42	HC	 0.0600	  
+   13	H43	HC	 0.0600	
+   
+
+[bonds]
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 C3
+C3 H31
+C3 H32
+C3 H33
+C2 C4
+C4 H41
+C4 H42
+C4 H43
+
+[connections]
+tail C1
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+C1 H11 H12 C2 H21 C3 H31 H32 H33 C4 H41 H42 H43
+*-----------------------------------------------------------------------
+{A1F}               ! A (R2) Substituent for ligand 18f
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	C1 	CT	-0.0050	 ! Ethylbenzene, 149    
+   2 	H11	HC	 0.0600	    
+   3 	H12	HC	 0.0600
+   4	C2 	CT	-0.1200
+   5	H21	HC	 0.0600
+   6	H22	HC	 0.0600
+   7 	C3 	CT	-0.1800	    
+   8	H31	HC	 0.0600	  
+   9	H32	HC	 0.0600	  
+   10	H33	HC	 0.0600	  
+   
+
+[bonds]
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 C3
+C3 H31
+C3 H32
+C3 H33
+
+[connections]
+tail C1
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+C1 H11 H12 C2 H21 H22 C3 H31 H32 H33
+*-----------------------------------------------------------------------
+{B1B}               ! B (R1) Substituent for ligand S9
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	C1 	CT 	-0.0650	    ! Toluene    
+   2 	H11	HC	 0.0600	    ! Toluene    
+   3 	H12	HC	 0.0600	    ! Toluene    
+   4 	H13	HC	 0.0600	    ! Toluene    
+   
+   ! Sum of charges is 0.115 to compensate for -0.115 on C9, N10 & H10
+   
+
+[bonds]
+C1 H11
+C1 H12
+C1 H13
+
+[connections]
+head C1
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+C1 H11 H12 H13
+*-----------------------------------------------------------------------
+{B1C}               ! B (R1) Substituent for ligand 18c
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	C1 	CT 	-0.0050	    	! 149 all-atom C: CH2, ethyl benzene 
+   2 	H11	HC	 0.0600	
+   3 	H12	HC	 0.0600	
+   4 	C2 	CT	-0.1800	    
+   5	H21	HC	 0.0600	  
+   6	H22	HC	 0.0600	  
+   7	H23	HC	 0.0600	  
+
+   ! Sum of charges is 0.115 to compensate for -0.115 on C9, N10 & H10
+   
+
+[bonds]
+C1 H11
+C1 H12
+C1 C2
+C2 H21
+C2 H22
+C2 H23
+
+[connections]
+head C1
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+C1 H11 H12 C2 H21 H22 H23
+*-----------------------------------------------------------------------
+{B1E}               ! B (R1) Substituent for ligand 18e (new)
+   [info]   
+                                       !SYBYLtype  GROUP   
+		PDBtype    HETATM   
+  [atoms]   
+   1 	C1 	CT 	 0.0550	    	! 515 all-atom C: CH, isopropyl benzene    
+   2 	H11	HC	 0.0600	    	   
+   3 	C2 	CT	-0.1800	    
+   4 	H21	HC	 0.0600	  
+   5	H22	HC	 0.0600	  
+   6	H23	HC	 0.0600	 
+   7	C3 	CT	-0.1800	  
+   8	H31	HC	 0.0600	  
+   9	H32	HC	 0.0600	  
+   10	H33	HC	 0.0600	  
+   
+   ! Sum of charges is 0.115 to compensate for -0.115 on C9, N10 & H10
+   
+
+[bonds]
+C1 H11
+C1 C2
+C2 H21
+C2 H22
+C2 H23
+C1 C3
+C3 H31
+C3 H32
+C3 H33
+
+[connections]
+head C1
+
+[charge_groups]	 ! Charge groups shouldn't matter. Q atoms interactions are calculated with no cutoff
+C1 H11 C2 H21 H22 H23 C3 H31 H32 H33
+*-----------------------------------------------------------------------
