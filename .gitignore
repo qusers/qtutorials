@@ -2,7 +2,7 @@
 *.bbl
 *.toc
 *.aux
-*.pdf
+!*.pdf
 *.log
 *.re
 *.dcd
