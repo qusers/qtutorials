@@ -103,8 +103,8 @@ HC.du     0.00     0.00    0.00     0.00     0.00     0.00    1.008    ! Dummy H
 28  HC   HC.du
 
 [bond_types]
-1     536.0     1.529   !CT     CT
-2     680.0     1.090   !HC     CT
+1     536.0     1.529   !CT      CT
+2     680.0     1.090   !HC      CT
 3     1140.00   1.229   !Cket    O
 4     634.000   1.522   !Cket    CT
 
@@ -115,12 +115,12 @@ HC.du     0.00     0.00    0.00     0.00     0.00     0.00    1.008    ! Dummy H
 2  28   2  2
 
 [angle_types]
-1      126.000     111.100   !Cket    CT      CT         
-2      160.000     120.400   !CT      Cket    O          
-3       75.000     110.700   !HC     CT     CT 
-4       70.000     109.500   !HC     CT     C  
-5      116.700     112.700   !CT    CT    CT
-6      140.000     116.000   !CT      Cket    CT         
+1      126.000     111.100   !Cket    CT      CT
+2      160.000     120.400   !CT      Cket    O
+3       75.000     110.700   !HC      CT      CT
+4       70.000     109.500   !HC      CT      C
+5      116.700     112.700   !CT      CT      CT
+6      140.000     116.000   !CT      Cket    CT
 7      100.000     109.500   !HC      CT      Cket
 
 [change_angles]
@@ -155,8 +155,6 @@ HC.du     0.00     0.00    0.00     0.00     0.00     0.00    1.008    ! Dummy H
 16  0.150    3.000    0.000   1.000   !HC      CT      CT      HC   
 17  0.150    3.000    0.000   1.000   !CT      CT      CT      HC    
 18 -0.038    3.000    0.000   1.000   !HC      CT      CT      Cket  
-
-
 
 [change_torsions]
 2  3  4  7     1  4
@@ -218,10 +216,8 @@ HC.du     0.00     0.00    0.00     0.00     0.00     0.00    1.008    ! Dummy H
 11 2  1  7     17 11
 11 2  1  7     17 12
 
-
-
 [improper_types]
-1 10.5	180.000	!O	Cket	CT	CT	
+1 10.5 180.000 !O Cket CT CT
 
 [change_impropers]
 1 2 11 3   0  1

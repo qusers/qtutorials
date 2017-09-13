@@ -1,14 +1,19 @@
-rl ../../qoplsaa.lib
-rl ../../heme.lib
-rl ../../cma.lib
-rprm ../../qoplsaa.prm
+!Read the topology (library) file/files
+rl ../../ff/qoplsaa.lib
+rl ../../ff/heme.lib
+rl ../../ff/cma.lib
 
+!Read the parameter file (i.e. force-field specific)
+rff ../../ff/qoplsaa.prm
+
+!Read a topology previously generated with qprep
 rt cma.top
 
 mask none
 mask not excluded
 
-writepdb cma_masked.pdb y
+!Write pdb file corresponding to the read topology.
+wp cma_masked.pdb y
 
 q
 

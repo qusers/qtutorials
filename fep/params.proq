@@ -1,8 +1,0 @@
-#list of residues, the two atoms in the bond to rotate, their charge center and the charge
-#bonds
-#res	         bond	cent	chg
-ASP,ASH          CG:CB   CG    -1,0
-ARG,ARN          CZ:NE   CZ    +1,0
-GLU,GLH          CD:CG   CD    -1,0
-HIP,HIE,HID      CG:CB   CB    +1,0,0
-LYS,LYN          NZ:CE   NZ    +1,0

@@ -1,0 +1,11 @@
+*.blg
+*.bbl
+*.toc
+*.aux
+*.pdf
+*.log
+*.re
+*.dcd
+*.en
+*.DS*
+*.Rhistory

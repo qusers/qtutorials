@@ -1,12 +1,11 @@
 Q topology file
 TITLE      lig
-DATE       20050805
+DATE       20150713
 VERSION     5.03
-PDB_FILE   cma.pdb
-LIB_FILES  ../../qoplsaa.lib;../../heme.lib;../../cma.lib
+LIB_FILES  ../../ff/qoplsaa.lib;../../ff/heme.lib;../../ff/cma.lib
 FORCEFIELD Q-OPLSAA
 FF_TYPE    2
-PRM_FILE   ../../qoplsaa.prm
+PRM_FILE   ../../ff/qoplsaa.prm
 END        of header
     3418      28 = Total no. of atoms, no. of solute atoms. Coordinates: (2*3 per line)
    46.508    44.528    14.647     44.913    44.451    14.586
@@ -15,7 +14,7 @@ END        of header
    46.875    43.585    13.416     46.482    42.074    13.565
    48.396    43.529    13.036     47.083    44.219    16.031
    44.468    45.353    15.006     43.921    45.140    12.774
-   44.252    43.284    12.949     46.013    44.060    11.408
+   44.260    43.281    12.955     46.013    44.060    11.408
    47.445    46.019    11.978     45.802    46.636    12.265
    46.234    46.731    14.582     47.936    46.071    14.215
    46.095    41.682    12.625     47.350    41.476    13.841

@@ -1,9 +1,12 @@
 qtutorials
 ==========
 
-Tutorial source files used for teaching Q in courses and workshops.
+Tutorial source files used for teaching **Q** in courses and workshops.
 
-This repository contains source files for carrying out practical exercises using Q.
+This  repository  contains source  files  for  carrying out  practical
+exercises using **Q**.
 
-A collection of LaTeX documentation to accompany these tutorials will soon be available here.
+Documentation can be found in the **docs** folder.
+
+
 
