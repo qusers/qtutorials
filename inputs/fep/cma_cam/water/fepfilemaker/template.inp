@@ -1,0 +1,37 @@
+[MD]
+steps                    200000
+stepsize                 2
+temperature              300
+bath_coupling            200
+shake_solvent            on
+shake_solute             on
+lrf                      on
+separate_scaling         on
+
+[cut_offs]
+solute_solute             10
+solute_solvent            10
+solvent_solvent           10
+q_atom                    99
+lrf                       99
+
+[sphere]
+shell_force              10
+shell_radius             16
+
+[intervals]
+non_bond                 25
+output                   1000
+energy                   50
+trajectory               5000
+[files]
+topology       TOPOLOGU.top
+restart        md0.re
+trajectory     md.dcd
+final          md0.re
+energy         md.en
+
+[sequence_restraints]
+
+[lambdas]
+1.00 0.00

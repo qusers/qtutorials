@@ -166,7 +166,7 @@ exp(-\beta\Delta A)= \langle exp(-\beta\Delta U) \rangle
 
 \noindent  Eq.   \ref{eq:zwanzig}  is  derived  from   the  statistical
 mechanics expression for the Helmholtz free energy, \textit{A}, and the
-configurational integral, \textit {Z}.
+configurational partition function integral, \textit {Z}.
 
 \begin{equation}
 \label{eq:s.m.h.}
@@ -220,21 +220,21 @@ Before starting the tutorial change the directory to \texttt{protein}
 or \texttt{water} in the \texttt{FEP} folder.\\
 
 In this tutorial  we are going to analyze the  perturbation of camphor
-(CAM)  to  camphane (CMA)  in  water  and  in P450cam.   P450  enzymes
-catalyze  the  hydroxylation  of   unactivated  alkanes,  and  P450cam
-catalyzes  specifically the  hydroxylation of  camphor.  Although  the
+(CAM) to  camphane (CMA)  in water  and in  the P450cam  enzyme.  P450
+enzymes catalyze the hydroxylation of unactivated alkanes, and P450cam
+specifically  catalyzes the  hydroxylation of  camphor.  Although  the
 system investigated  here is  P450cam the rules  in this  tutorial are
-general and can be applied to whatever system of interest.
+general and can be applied to any system of interest.
 
-A FEP simulation is carried out in \textbf{Q} with a \texttt{name.fep}
+A FEP simulation  is specified in \textbf{Q}  with a \texttt{name.fep}
 file   where  the   transformation  is   defined  in   detail.   Every
-\texttt{name.fep} is divided  in a number of sections  where we define
-atoms, charges,  bonds, angles  etc that are  changing during  the FEP
-simulation  (Figure   \ref{fig:fepfile}).  Note  that  a   section  in
+\texttt{name.fep} file is split into a number of sections where we can
+define atoms, charges, bonds and  angles which are changing during the
+FEP simulation (see Figure \ref{fig:fepfile}).  Note that a section in
 \textbf{Q} follows the syntax $[$...$]$.\\
 
--  Open   the  \texttt{cma\_cam.fep},   in  the   \texttt{protein}  or
-\texttt{water}   folder,   that  is   used   for   the  CAM   to   CMA
+-  Open   the  \texttt{cma\_cam.fep} file,   in  the   \texttt{protein}  or
+\texttt{water}   folder,   that  is   used   for   the  CMA   to   CAM
 perturbation. Try  to locate the  different sections that are  used in
 the FEP file. Can you understand how CMA is transformed to CAM?\\
 

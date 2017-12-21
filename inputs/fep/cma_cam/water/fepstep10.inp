@@ -1,0 +1,43 @@
+[MD]
+steps                  20000
+stepsize                  1.00
+temperature             300.0
+bath_coupling           100
+shake_solvent            on
+shake_solute            off
+lrf                      on
+
+[cut_offs]
+solute_solute            10
+solute_solvent           10
+solvent_solvent          10
+q_atom                   99
+lrf                      99
+
+[sphere]
+shell_force              10
+shell_radius           0.83
+
+[intervals]
+non_bond                 25
+output                   25
+energy                   25
+trajectory              500
+
+[trajectory_atoms]
+not excluded
+
+[files]
+topology       cma.top
+final          fepstep10.re
+energy         fepstep10.en
+restart        fepstep9.re
+fep            cma_cam.fep
+trajectory     fepstep10.dcd
+
+[sequence_restraints]
+1 28 10 1 2
+
+[lambdas]
+!CMA    CAM
+0.6349206   0.3650794

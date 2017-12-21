@@ -1,0 +1,42 @@
+!Read the topology (library) file/files
+rl ../../ff/qoplsaa.lib
+rl ../../ff/heme.lib
+rl ../../ff/cma.lib
+
+!Read the parameter file (i.e. force-field specific)
+rff ../../ff/qoplsaa.prm
+
+!Read the starting, usually precleaned pdb file.
+rp 2cpp_his_asn_gln_noH_fixed_broken_sidechains_18axh2o.pdb
+
+!list residues sequence
+ls
+
+!list atoms in residue
+lr 1
+
+!show a list of Q preferences
+prefs
+
+!sulfur-sulfur bridges need to be created by the user.
+!addbond atomnum atomnum y
+
+!Create water sphere
+boundary 1 407:C1 20
+solvate 407:C1 20 1 HOH
+
+!Create initial topology
+mt lig
+wt cma.top
+
+!Punch to output unusually large energies
+checkbonds 6
+checkangs  6
+checktors  6
+checkimps  6
+
+!Write pdb file corresponding to the created topology.
+wp cma_prepped_pre_proq.pdb y
+q
+
+

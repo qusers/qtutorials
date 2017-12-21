@@ -1,0 +1,60 @@
+
+R version 3.2.0 (2015-04-16) -- "Full of Ingredients"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> lambdas <- read.csv("lambdaspacing.dat", header = FALSE)
+> 
+> lambdas[2,]-lambdas[1,]
+         V1        V2
+2 0.0037037 0.0037037
+> lambdas[3,]-lambdas[2,]
+         V1        V2
+3 0.0111111 0.0111111
+> lambdas[4,]-lambdas[3,]
+         V1        V2
+4 0.0185185 0.0185185
+> 
+> 
+> xs <- 0.5+(-1/2*cos((seq(1,31)/31)*pi))
+> #xs <- exp((-1/2)*(seq(-31,30,2)/31)^2)
+> #xs <- (1.0*(seq(1,31)/31)+(0.1^2))
+> 
+> lambdadiff <- apply(lambdas, 2, diff)
+> lambdadiffdiff <- apply(lambdadiff, 2, diff)
+> 
+> fit.md  <- lm(seq(1,31) ~ lambdas[,1])
+> 
+> par(mfrow=c(2,2))
+> 
+> plot(lambdas[,2],seq(1,31))
+> lines(lambdas[,2],seq(1,31), xlab="lambdapoint")
+> lines(xs,seq(1,31), xlab="lambdapoint", col="red")
+> #plot(fit.md, col="blue")
+> 
+> plot(xs,seq(1,31))
+> lines(xs,seq(1,31), xlab="lambdapoint")
+> 
+> plot(seq(1,30), lambdadiff[,1])
+> lines(seq(1,30), lambdadiff[,1], xlab="lambdapoint")
+> 
+> plot(seq(1,29), lambdadiffdiff[,1])
+> lines(seq(1,29), lambdadiffdiff[,1], xlab="lambdapoint")
+> 
+> proc.time()
+   user  system elapsed 
+  0.226   0.047   0.318 

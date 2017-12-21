@@ -1,0 +1,186 @@
+Running equilibration step 1
+
+real	0m37.549s
+user	3m29.930s
+sys	0m55.854s
+
+Running equilibration step 2
+
+real	0m38.837s
+user	3m38.908s
+sys	0m57.498s
+
+Running equilibration step 3
+
+real	0m44.149s
+user	4m11.344s
+sys	0m59.186s
+
+Running equilibration step 4
+
+real	0m43.635s
+user	4m11.211s
+sys	1m0.317s
+
+Running equilibration step 5
+
+real	8m57.765s
+user	52m46.459s
+sys	12m26.905s
+
+Running FEP window 0
+
+real	3m36.719s
+user	21m3.642s
+sys	5m4.405s
+Running FEP window 1
+
+real	3m36.829s
+user	21m6.392s
+sys	5m3.983s
+Running FEP window 2
+
+real	3m36.335s
+user	21m11.882s
+sys	5m2.779s
+Running FEP window 3
+
+real	3m35.902s
+user	21m15.962s
+sys	4m57.037s
+Running FEP window 4
+
+real	3m36.565s
+user	21m25.873s
+sys	4m55.106s
+Running FEP window 5
+
+real	3m36.331s
+user	21m10.488s
+sys	5m0.476s
+Running FEP window 6
+
+real	3m35.525s
+user	21m22.446s
+sys	4m51.972s
+Running FEP window 7
+
+real	3m36.096s
+user	21m14.029s
+sys	4m57.756s
+Running FEP window 8
+
+real	3m36.370s
+user	21m27.688s
+sys	4m53.447s
+Running FEP window 9
+
+real	3m35.503s
+user	21m24.647s
+sys	4m54.497s
+Running FEP window 10
+
+real	3m35.957s
+user	21m22.306s
+sys	4m53.817s
+Running FEP window 11
+
+real	3m36.605s
+user	21m19.758s
+sys	4m54.070s
+Running FEP window 12
+
+real	3m36.348s
+user	21m20.923s
+sys	4m56.351s
+Running FEP window 13
+
+real	3m36.000s
+user	21m18.147s
+sys	4m56.351s
+Running FEP window 14
+
+real	3m36.190s
+user	21m23.283s
+sys	4m57.742s
+Running FEP window 15
+
+real	3m35.527s
+user	21m7.782s
+sys	4m58.452s
+Running FEP window 16
+
+real	3m35.580s
+user	21m17.586s
+sys	4m57.114s
+Running FEP window 17
+
+real	3m36.397s
+user	21m18.038s
+sys	4m54.631s
+Running FEP window 18
+
+real	3m36.501s
+user	21m22.151s
+sys	4m56.735s
+Running FEP window 19
+
+real	3m37.650s
+user	21m3.709s
+sys	5m6.791s
+Running FEP window 20
+
+real	3m36.009s
+user	20m52.195s
+sys	5m3.974s
+Running FEP window 21
+
+real	3m35.581s
+user	21m9.512s
+sys	4m56.702s
+Running FEP window 22
+
+real	3m33.806s
+user	21m11.254s
+sys	4m51.478s
+Running FEP window 23
+
+real	3m38.438s
+user	20m37.023s
+sys	5m15.777s
+Running FEP window 24
+
+real	3m35.009s
+user	20m52.472s
+sys	5m1.283s
+Running FEP window 25
+
+real	3m38.382s
+user	20m33.714s
+sys	5m21.143s
+Running FEP window 26
+
+real	3m41.462s
+user	20m33.457s
+sys	5m32.018s
+Running FEP window 27
+
+real	3m57.484s
+user	19m50.692s
+sys	5m32.088s
+Running FEP window 28
+
+real	3m43.787s
+user	19m52.880s
+sys	5m56.932s
+Running FEP window 29
+
+real	3m47.785s
+user	20m30.102s
+sys	5m25.773s
+Running FEP window 30
+
+real	3m40.375s
+user	20m13.757s
+sys	5m36.913s
+Analyzing FEP results
